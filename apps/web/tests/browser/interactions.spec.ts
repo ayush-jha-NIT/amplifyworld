@@ -108,14 +108,17 @@ test.describe("Module 16 keyboard, motion and functional regressions", () => {
     expect(posts).toEqual([]);
   });
 
-  for (const viewport of [390, 1440]) {
-    test("browser zoom 200 percent does not clip headings or controls at " + viewport, async ({ page }) => {
-      await page.setViewportSize({ width: viewport, height: 900 });
+  // Chromium headless cannot reliably change the browser's actual zoom level.
+  // Reflow equivalence is measured by halving the CSS viewport, as real browser
+  // zoom would, instead of applying CSS 'html { zoom: 2 }' after layout.
+  for (const physicalWidth of [640, 1440]) {
+    test("contact reflows for effective 200 percent zoom from " + physicalWidth + "px", async ({ page }) => {
+      const effectiveCssWidth = physicalWidth / 2;
+      await page.setViewportSize({ width: effectiveCssWidth, height: 900 });
       await page.emulateMedia({ reducedMotion: "reduce" });
-      // Chromium uses the zoom CSS property in place of OS display scaling in headless CI.
       await page.goto("/contact");
-      await page.addStyleTag({ content: "html { zoom: 2; }" });
-      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      const overflow = await page.evaluate(() =>
+        document.documentElement.scrollWidth - document.documentElement.clientWidth);
       expect(overflow).toBeLessThanOrEqual(2);
       await expect(page.getByRole("textbox", { name: "Full Name" })).toBeVisible();
     });
