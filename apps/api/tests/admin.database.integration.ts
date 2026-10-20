@@ -32,7 +32,6 @@ after(async()=>{
   if(postId)await db.post.deleteMany({where:{id:postId}});
   if(projectId)await db.project.deleteMany({where:{id:projectId}});
   if(categoryId)await db.category.deleteMany({where:{id:categoryId}});
-  await db.auditEvent.deleteMany({where:{actorId:{in:[editorId,administratorId]}}});
   await db.adminUser.deleteMany({where:{id:{in:[editorId,administratorId]}}});
   await disconnectDatabase();
 });
