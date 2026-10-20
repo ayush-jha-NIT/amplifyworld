@@ -32,6 +32,7 @@ enum InquiryStatus {
 enum NotificationStatus {
   NOT_REQUESTED
   PENDING
+  PROCESSING
   SENT
   FAILED
   SKIPPED
@@ -194,6 +195,9 @@ model Inquiry {
   notificationAttempts Int                @default(0) @map("notification_attempts")
   notifiedAt           DateTime?          @map("notified_at") @db.Timestamptz(3)
   nextNotificationAt   DateTime?          @map("next_notification_at") @db.Timestamptz(3)
+  notificationClaimToken String?           @map("notification_claim_token") @db.Uuid
+  notificationLeaseUntil DateTime?          @map("notification_lease_until") @db.Timestamptz(3)
+  notificationProviderId String?            @map("notification_provider_id") @db.VarChar(128)
   // Module 12 must require both for retries; no request payload is duplicated.
   idempotencyKey       String?            @unique @map("idempotency_key") @db.Uuid
   requestHash          String?            @map("request_hash") @db.Char(64)
@@ -203,6 +207,7 @@ model Inquiry {
 
   @@index([status, createdAt(sort: Desc), id])
   @@index([notificationStatus, nextNotificationAt])
+  @@index([notificationStatus, notificationLeaseUntil])
   @@index([retentionExpiresAt])
   @@index([serviceId])
   @@map("inquiries")
@@ -222,4 +227,14 @@ model AuditEvent {
   @@index([actorId, createdAt(sort: Desc)])
   @@index([entityType, entityId, createdAt(sort: Desc)])
   @@map("audit_events")
+}
+
+ // Hash-only distributed admission control. No raw IP address or email stored.
+model InquiryRateBucket {
+  keyDigest String   @id @map("key_digest") @db.Char(64)
+  hits      Int      @default(0)
+  expiresAt DateTime @map("expires_at") @db.Timestamptz(3)
+
+  @@index([expiresAt])
+  @@map("inquiry_rate_buckets")
 }

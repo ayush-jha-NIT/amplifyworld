@@ -1,4 +1,4 @@
-import { createHash } from "node:crypto";
+import { createHash, createHmac } from "node:crypto";
 import { Router } from "express";
 import type { Request, Response } from "express";
 import { validateInquiryPayload } from "@amplifyworld/shared/inquiry";
@@ -10,6 +10,7 @@ type ApiOptions = {
   collectionEnabled?: boolean;
   retentionDays?: number;
   privacyApproved?: boolean;
+  abuseSecret?: string;
 };
 
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -41,7 +42,8 @@ function collectionAvailable(options: ApiOptions): boolean {
   return (options.collectionEnabled ?? process.env.INQUIRY_COLLECTION_ENABLED === "true") &&
     (options.privacyApproved ?? process.env.INQUIRY_PRIVACY_POLICY_APPROVED === "true") &&
     Number.isInteger(days) && days >= 1 && days <= 365 &&
-    Boolean(options.repository || process.env.DATABASE_URL);
+    Boolean(options.repository || process.env.DATABASE_URL) &&
+    Boolean(options.repository || (options.abuseSecret ?? process.env.INQUIRY_ABUSE_HASH_SECRET ?? "").length >= 32);
 }
 /** Local bounded rate guard; distributed abuse controls are expanded in Module 13. */
 function createLocalRateLimit() {
@@ -146,7 +148,18 @@ export function createPublicRouter(options: ApiOptions = {}) {
       error(res, 400, "IDEMPOTENCY_REQUIRED", "A valid idempotency key is required.");
       return;
     }
-    const validation = validateInquiryPayload(req.body);
+    // Empty decoy input catches simplistic automated form fills; do not issue fake receipts.
+    const input = req.body as Record<string, unknown> | null;
+    if (input && typeof input === "object" && Object.prototype.hasOwnProperty.call(input, "website")) {
+      if (typeof input.website !== "string" || input.website.trim() !== "") {
+        res.status(204).end();
+        return;
+      }
+    }
+    const { website: _honeypot, ...raw } = input && typeof input === "object" && !Array.isArray(input)
+      ? input : { website: undefined };
+    void _honeypot;
+    const validation = validateInquiryPayload(raw);
     if (!validation.valid) {
       error(res, 422, "VALIDATION_ERROR", "Review the highlighted fields.", validation.errors);
       return;
@@ -156,6 +169,22 @@ export function createPublicRouter(options: ApiOptions = {}) {
     const body = JSON.stringify(payload);
     const hash = createHash("sha256").update(body).digest("hex");
     try {
+      // HMAC stores only an opaque digest per UTC 10-minute window; no raw IP/email.
+      // Absent private secret fails closed when using the real Prisma repository.
+      const secret = options.abuseSecret ?? process.env.INQUIRY_ABUSE_HASH_SECRET;
+      if (!options.repository && (!secret || secret.length < 32)) {
+        error(res, 503, "ABUSE_GUARD_UNAVAILABLE", "Inquiry service is temporarily unavailable.");
+        return;
+      }
+      if (secret && secret.length >= 32 && repository.consumeInquiryBudget) {
+        const block = Math.floor(Date.now() / 600_000);
+        const digest = createHmac("sha256", secret).update(String(block) + ":" + (req.ip ?? "unknown")).digest("hex");
+        if (!await repository.consumeInquiryBudget(digest)) {
+          res.setHeader("Retry-After", "600");
+          error(res, 429, "TOO_MANY_REQUESTS", "Too many inquiries. Please try later.");
+          return;
+        }
+      }
       const outcome = await repository.writeInquiry(payload, key, hash, retention(options));
       if ("conflict" in outcome) {
         error(res, 409, "IDEMPOTENCY_CONFLICT", "This retry key was used for different details.");
@@ -164,7 +193,7 @@ export function createPublicRouter(options: ApiOptions = {}) {
       // Acknowledgement follows the awaited durable write only.
       res.status(outcome.created ? 201 : 200).json({
         status: "accepted", receiptId: outcome.id, duplicate: !outcome.created,
-        notification: "not_requested"
+        notification: outcome.notification ?? "not_requested"
       });
     } catch {
       // Never expose raw driver errors, SQL, credentials, or submitted PII.

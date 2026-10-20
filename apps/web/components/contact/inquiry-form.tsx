@@ -17,6 +17,7 @@ export function InquiryForm({ submitInquiry }: { submitInquiry?: InquirySubmitte
   const [errors, setErrors] = useState<InquiryErrors>({});
   const [phase, setPhase] = useState<Phase>("idle");
   const formRef = useRef<HTMLFormElement>(null);
+  const honeypotRef = useRef<HTMLInputElement>(null);
   const statusRef = useRef<HTMLDivElement>(null);
   const inFlight = useRef(false);
   const accepted = useRef(false);
@@ -62,6 +63,11 @@ export function InquiryForm({ submitInquiry }: { submitInquiry?: InquirySubmitte
     event.preventDefault();
     // A synchronous lock also covers repeated Enter/programmatic submits before React renders.
     if (!ready || inFlight.current || accepted.current) return;
+    if (honeypotRef.current?.value.trim()) {
+      // Discard bot-filled forms without storing, emailing or issuing a fake receipt.
+      setPhase("failure");
+      return;
+    }
     const nextErrors = validateInquiry(values);
     if (Object.keys(nextErrors).length) {
       showErrors(nextErrors);
@@ -151,6 +157,10 @@ export function InquiryForm({ submitInquiry }: { submitInquiry?: InquirySubmitte
           ))}</ul>
         </div>
       )}
+      <div className="inquiry-honeypot" aria-hidden="true">
+        <label htmlFor="inquiry-website">Leave this field empty</label>
+        <input ref={honeypotRef} id="inquiry-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
       <fieldset disabled={disabled} className="inquiry-fields">
         <legend className="sr-only">Your contact and project details</legend>
         {(["name", "email", "phone", "company"] as const).map((field) => (

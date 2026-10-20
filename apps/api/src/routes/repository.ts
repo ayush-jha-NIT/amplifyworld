@@ -1,14 +1,17 @@
 import { getDatabase } from "../db/client.js";
+import { resendSettings } from "../notifications/resend.js";
+import { workerEnabled } from "../notifications/settings.js";
 import type { InquiryInput } from "@amplifyworld/shared/inquiry";
 
 export type Listing = { limit: number; offset: number; category?: string };
-export type InquiryReceipt = { id: string; created: boolean } | { conflict: true };
+export type InquiryReceipt = { id: string; created: boolean; notification?: "queued" | "not_requested" } | { conflict: true };
 export interface PublicRepository {
   listPosts(query: Listing): Promise<{ items: unknown[]; total: number }>;
   readPost(slug: string): Promise<unknown | null>;
   listProjects(query: Listing): Promise<{ items: unknown[]; total: number }>;
   readProject(slug: string): Promise<unknown | null>;
   writeInquiry(data: InquiryInput, key: string, requestHash: string, retentionDays: number): Promise<InquiryReceipt>;
+  consumeInquiryBudget?(digest: string): Promise<boolean>;
   ready(): Promise<boolean>;
 }
 function postWhere(category?: string) {
@@ -69,22 +72,42 @@ export const prismaPublicRepository: PublicRepository = {
         media: { orderBy: { sortOrder: "asc" }, select: { kind: true, url: true, alt: true, sortOrder: true } } }
     });
   },
+  async consumeInquiryBudget(digest) {
+    const sql = [
+      "INSERT INTO inquiry_rate_buckets (key_digest, hits, expires_at)",
+      "VALUES ($1, 1, now() + interval '10 minutes')",
+      "ON CONFLICT (key_digest) DO UPDATE SET hits = inquiry_rate_buckets.hits + 1",
+      "RETURNING hits"
+    ].join(" ");
+    const rows = await getDatabase().$queryRawUnsafe<Array<{ hits: number }>>(sql, digest);
+    return Boolean(rows[0] && rows[0].hits <= 5);
+  },
   async writeInquiry(data, key, requestHash, retentionDays) {
     const db = getDatabase();
+    const queueEnabled = workerEnabled(process.env);
+    if (process.env.INQUIRY_EMAIL_ENABLED === "true" && !queueEnabled) {
+      throw new Error("Email queue requires approved collection configuration");
+    }
+    if (queueEnabled) resendSettings(process.env); // Validate all private values before storing.
     try {
       const entry = await db.inquiry.create({
         data: { name: data.name, email: data.email, phone: data.phone || null, company: data.company || null,
           message: data.message, serviceId: data.service === "not-sure" ? null : data.service,
           idempotencyKey: key, requestHash,
+          notificationStatus: queueEnabled ? "PENDING" : "NOT_REQUESTED",
+          nextNotificationAt: queueEnabled ? new Date() : null,
           retentionExpiresAt: new Date(Date.now() + retentionDays * 86_400_000) },
         select: { id: true }
       });
-      return { id: entry.id, created: true };
+      return { id: entry.id, created: true, notification: queueEnabled ? "queued" : "not_requested" };
     } catch (error: unknown) {
       if (typeof error !== "object" || error === null || !("code" in error) || error.code !== "P2002") throw error;
-      const old = await db.inquiry.findUnique({ where: { idempotencyKey: key }, select: { id: true, requestHash: true } });
+      const old = await db.inquiry.findUnique({ where: { idempotencyKey: key }, select: { id: true, requestHash: true, notificationStatus: true } });
       if (!old) throw error;
-      return old.requestHash === requestHash ? { id: old.id, created: false } : { conflict: true };
+      return old.requestHash === requestHash ? {
+        id: old.id, created: false,
+        notification: old.notificationStatus === "NOT_REQUESTED" ? "not_requested" : "queued"
+      } : { conflict: true };
     }
   },
   async ready() {

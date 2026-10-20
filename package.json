@@ -18,6 +18,8 @@
     "db:migrate:deploy": "pnpm --filter @amplifyworld/api db:migrate:deploy",
     "db:migrate:status": "pnpm --filter @amplifyworld/api db:migrate:status",
     "db:migrate:dev": "pnpm --filter @amplifyworld/api db:migrate:dev",
-    "test:database": "pnpm --filter @amplifyworld/api test:database"
+    "test:database": "pnpm --filter @amplifyworld/api test:database",
+    "notifications:dispatch": "pnpm --filter @amplifyworld/api notifications:dispatch",
+    "retention:prune": "pnpm --filter @amplifyworld/api retention:prune"
   }
 }

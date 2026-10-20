@@ -114,3 +114,15 @@ test("production defaults never enable collection without explicit approved rete
     await new Promise<void>(resolve => server.close(() => resolve()));
   }
 });
+
+
+test("honeypot bot input does not issue a receipt or create a stored inquiry", async () => {
+  let writes = 0;
+  const repo = repository();
+  repo.writeInquiry = async () => { writes++; return { id: randomUUID(), created: true }; };
+  await withApi(repo, async url => {
+    const result = await submit(url, { ...payload, website: "spam target" });
+    assert.equal(result.status, 204);
+    assert.equal(writes, 0);
+  });
+});

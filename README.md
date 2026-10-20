@@ -4,7 +4,7 @@
 
 AmplifyWorld helps businesses grow through strategic marketing, technology, branding, web development, SEO, GEO and AI automation. This repository is the planned production website for the agency.
 
-> **Development status:** **Modules 0–12 implemented and merged into `main`**: project requirements, production website, Contact form, Prisma/PostgreSQL schema and migrations, public Express content routes and database-backed inquiry receipts. **Modules 13–18 remain.** Contact submission is OFF by default until a verified Neon database, approved privacy/retention policy and deliberate server/web configuration are complete; Resend notifications and anti-abuse hardening remain Module 13.
+> **Development status:** **Modules 0–13 implemented on this development branch**: public experience, database, public APIs, secure inquiry receipts and the opt-in Resend notification/anti-abuse workflow. **Modules 14–18 remain.** No live Neon deployment, verified Resend sender or production message delivery is claimed.
 
 Modules 11 and 12 passed PostgreSQL integration, application checks and browser regressions. The [database guide](docs/DATABASE.md) covers the operator-controlled Neon bootstrap. **No Neon instance or production deployment has been provisioned in this work.**
 
@@ -60,11 +60,13 @@ pnpm dev
 
 The frontend with homepage, About, Portfolio, inline Blog reader and Contact runs at `http://localhost:3000` and the Express health endpoint at `http://localhost:4000/health`. Run `pnpm check` for build, typecheck, lint and tests. After building, run `pnpm --filter @amplifyworld/web exec playwright install chromium` then `pnpm --filter @amplifyworld/web test:browser` for browser interaction, accessibility and responsive checks. CI runs both suites and saves browser screenshots. The workspace source lives in `apps/web`, `apps/api` and `packages/shared`.
 
-The Contact form stays in **Check Inquiry** (local-only) mode by default. The Module 12 Express API implements `GET /api/v1/posts`, `/projects`, slug details, `/ready`, and `POST /api/v1/inquiries` with validated idempotent storage. To enable real collection, operators must first migrate a real Neon database and provide an approved privacy/retention policy, then deliberately configure `INQUIRY_COLLECTION_ENABLED=true`, `INQUIRY_PRIVACY_POLICY_APPROVED=true`, `INQUIRY_RETENTION_DAYS` (1–365), `DATABASE_URL`, `NEXT_PUBLIC_API_URL`, and `NEXT_PUBLIC_INQUIRIES_ENABLED=true`. **Receipt means stored, not emailed.** Resend notifications, distributed anti-abuse and live delivery tests are still pending. Configure `NEXT_PUBLIC_WHATSAPP_NUMBER` only with a verified business number.
+The Contact form stays in **Check Inquiry** (local-only) mode by default. The Module 12 Express API implements `GET /api/v1/posts`, `/projects`, slug details, `/ready`, and `POST /api/v1/inquiries` with validated idempotent storage. To enable real collection, operators must first migrate a real Neon database and provide an approved privacy/retention policy, then deliberately configure `INQUIRY_COLLECTION_ENABLED=true`, `INQUIRY_PRIVACY_POLICY_APPROVED=true`, `INQUIRY_RETENTION_DAYS` (1–365), `DATABASE_URL`, `NEXT_PUBLIC_API_URL`, and `NEXT_PUBLIC_INQUIRIES_ENABLED=true`. **Receipt means stored, not emailed.** Module 13 implements an opt-in, private Resend worker, distributed rate limiting and scheduled retention cleanup, **but these do not run until configured and deployed**. Live delivery testing remains pending. Configure `NEXT_PUBLIC_WHATSAPP_NUMBER` only with a verified business number.
 
 The independently reviewable design kit lives in [`design-assets/`](design-assets/README.md), with integrated developer instructions in [`docs/design/INTEGRATION_HANDOFF.md`](docs/design/INTEGRATION_HANDOFF.md). The large preview assets are not production page backgrounds.
 
 ## Project documents
+
+- [Module 13 notification queue, Resend configuration and anti-abuse](docs/MODULE_13_REPORT.md)
 
 - [Module 12 API, inquiry contracts and safety gates](docs/MODULE_12_REPORT.md)
 

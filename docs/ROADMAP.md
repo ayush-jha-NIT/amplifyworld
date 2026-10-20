@@ -26,7 +26,7 @@
 
 ## Dependencies
 
-**Modules 0–12 are merged.** Module 11 provides the tested PostgreSQL/Prisma migration and database foundation. Module 12 adds published-content read APIs and idempotent, durable inquiry submission. Collection remains disabled until a real migrated Neon database and reviewed privacy/retention configuration are supplied. Module 13 will add Resend and distributed anti-abuse hardening. [Module 11](MODULE_11_REPORT.md) · [Module 12](MODULE_12_REPORT.md) · [Database guide](DATABASE.md).
+**Modules 0–12 are merged; Module 13 is under acceptance review.** Module 11 provides the tested PostgreSQL/Prisma migration and database foundation. Module 12 adds published-content read APIs and idempotent, durable inquiry submission. Collection remains disabled until a real migrated Neon database and reviewed privacy/retention configuration are supplied. Module 13 adds an opt-in server-side Resend notification queue, durable retries, shared PostgreSQL rate guard and retention cleanup; production activation requires real operator configuration. [Module 11](MODULE_11_REPORT.md) · [Module 12](MODULE_12_REPORT.md) · [Database guide](DATABASE.md).
 
 - M1 supplies web/API build foundation.
 - M2–M4 establish the reusable visual language and assets.
