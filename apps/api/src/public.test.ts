@@ -30,7 +30,7 @@ async function withApi(repo: PublicRepository, fn: (url: string) => Promise<void
     await new Promise<void>((resolve, reject) => server.close(err => err ? reject(err) : resolve()));
   }
 }
-async function submit(url: string, data: unknown, key = randomUUID()) {
+async function submit(url: string, data: unknown, key: string = randomUUID()) {
   return fetch(url + "/api/v1/inquiries", {
     method: "POST",
     headers: { "Content-Type": "application/json", "Idempotency-Key": key, Origin: "http://localhost:3000" },
