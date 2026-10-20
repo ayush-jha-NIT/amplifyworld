@@ -26,6 +26,12 @@ test.describe("Module 16 responsive visual evidence", () => {
         expect(response?.status()).toBe(200);
         await expect(page.locator("main h1")).toContainText(route.heading);
         await page.evaluate(() => document.fonts.ready);
+        // App Router may transiently render a streaming fallback after the first
+        // H1 appears; measure the settled main rather than its loading shell.
+        await page.waitForFunction(() => {
+          const main = document.querySelector("main");
+          return main?.querySelectorAll("h1").length === 1 && !main.hasAttribute("aria-busy");
+        }, undefined, { timeout: 15_000 });
         await expect(page.locator(".site-footer")).toBeVisible();
         const layout = await page.evaluate(() => {
           const viewport = document.documentElement.clientWidth;
