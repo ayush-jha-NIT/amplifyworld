@@ -76,7 +76,7 @@ export async function verifyOidcSubject(
     if (!key) return null;
     const signed = Buffer.from(parts[0] + "." + parts[1], "ascii");
     const signature = Buffer.from(parts[2], "base64url");
-    if (!verifySignature("RSA-SHA256", signed, createPublicKey({ key, format: "jwk" }), signature)) return null;
+    if (!verifySignature("RSA-SHA256", signed, createPublicKey({ key: key as unknown as import("node:crypto").JsonWebKey, format: "jwk" }), signature)) return null;
     return payload.sub;
   } catch { return null; }
 }
