@@ -155,12 +155,13 @@ export function HeroScene() {
 
       root.dataset.heroState = motionPreference.matches ? "complete" : "playing";
       const requested = new URL(window.location.href).searchParams.get("heroTime");
-      if (requested !== null && currentTimeline) {
+      const inspectionTimeline = currentTimeline as gsap.core.Timeline | null;
+      if (requested !== null && inspectionTimeline) {
         const seek = Number(requested);
         if (Number.isFinite(seek)) {
           manuallyPaused = true;
           setPaused(true);
-          currentTimeline.pause(Math.max(0, Math.min(7.2, seek)));
+          inspectionTimeline.pause(Math.max(0, Math.min(7.2, seek)));
           isFinished = seek >= 7.2;
           setFinished(isFinished);
           root.dataset.heroState = "inspection";
