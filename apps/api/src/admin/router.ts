@@ -1,5 +1,5 @@
 import { Router } from "express";
-import type { Request, Response } from "express";
+import type { Response } from "express";
 import { getDatabase } from "../db/client.js";
 import type { AdminActor, Authenticator } from "./auth.js";
 import { oidcAuthenticate, protect } from "./auth.js";
