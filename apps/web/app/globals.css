@@ -1,0 +1,37 @@
+:root {
+  color-scheme: dark;
+  --canvas: #05030c;
+  --surface: #150a26;
+  --foreground: #f8f4ff;
+  --muted: #c4b4d7;
+  --accent: #b522ed;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--canvas); color: var(--foreground); font-family: Arial, Helvetica, sans-serif; line-height: 1.6; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid #f365ff; outline-offset: 4px; }
+.site-header, .site-footer { border-color: rgba(213, 155, 255, .23); border-style: solid; border-width: 0 0 1px; }
+.site-header { background: rgba(8,4,16,.94); }
+.nav-shell, .content-shell { max-width: 1180px; margin: auto; padding: 24px; }
+.nav-shell { display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; }
+.brand { font-weight: 900; text-decoration: none; letter-spacing: -.045em; font-size: 1.4rem; }
+.brand span { color: #db30e8; }
+.nav-links { display: flex; flex-wrap: wrap; gap: 1.1rem; font-size: .92rem; }
+.nav-links a { text-decoration: none; }
+.nav-links a:hover { color: #eb83ff; }
+.hero { padding-block: clamp(90px, 15vw, 190px); max-width: 900px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .19em; color: #eb83ff; font-size: .75rem; font-weight: 800; }
+h1 { font-size: clamp(2.9rem, 6.7vw, 6.2rem); line-height: 1.03; letter-spacing: -.06em; margin: 16px 0 24px; }
+h2 { font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.13; letter-spacing: -.04em; margin: 12px 0 22px; }
+.gradient-text { background: linear-gradient(105deg, #bc33ff, #f15cc9); color: transparent; background-clip: text; }
+.lead { color: var(--muted); max-width: 650px; font-size: clamp(1rem, 1.6vw, 1.2rem); }
+.action { display: inline-block; margin-top: 20px; padding: 12px 20px; border-radius: 999px; background: linear-gradient(90deg, #7021e5, #c626e9); font-weight: 700; text-decoration: none; }
+.stack { padding: 42px 0 90px; }
+.services { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+.service { background: var(--surface); border: 1px solid #422159; border-radius: 16px; padding: 22px; }
+.service h3 { margin: 0; font-size: 1.05rem; }
+.site-footer { border-width: 1px 0 0; }
+.site-footer .content-shell { color: var(--muted); font-size: .85rem; }
+@media (max-width: 700px) { .services {grid-template-columns: 1fr;} .nav-links {gap: .7rem;} .nav-shell,.content-shell{padding: 18px;} .hero{padding-block:70px;} }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

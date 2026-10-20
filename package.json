@@ -1,0 +1,15 @@
+{
+  "name": "amplifyworld",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.13.1",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @amplifyworld/web --filter @amplifyworld/api dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "check": "pnpm build && pnpm typecheck && pnpm lint && pnpm test"
+  }
+}
