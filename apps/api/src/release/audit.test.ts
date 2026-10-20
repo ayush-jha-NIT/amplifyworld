@@ -33,7 +33,7 @@ test("preview, public-site and full production have independently escalating obl
  for(const phase of ["preview","public-site","full-production"] as const){
   assert.equal(evaluateRelease(record,phase).eligibleForHumanSignoff,true);
  }
- obj.gates.emailDeliveryVerified.status="blocked";
+ obj.gates.emailDeliveryVerified={status:"blocked",evidenceUrl:""};
  const changed=parseReleaseEvidence(obj);
  assert.equal(evaluateRelease(changed,"preview").eligibleForHumanSignoff,true);
  assert.equal(evaluateRelease(changed,"public-site").eligibleForHumanSignoff,true);
