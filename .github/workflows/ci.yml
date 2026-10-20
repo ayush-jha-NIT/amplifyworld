@@ -29,15 +29,15 @@ jobs:
         run: pnpm lint
       - name: Test
         run: pnpm test
-      - name: Install browser for Contact checks
+      - name: Install Chromium for cross-device QA
         run: pnpm --filter @amplifyworld/web exec playwright install --with-deps chromium
-      - name: Browser accessibility and interaction tests
+      - name: Browser accessibility, visual layout and interaction tests
         run: pnpm --filter @amplifyworld/web test:browser
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: contact-browser-evidence
+          name: module-16-cross-device-evidence
           path: |
             apps/web/test-results/
             apps/web/playwright-report/
