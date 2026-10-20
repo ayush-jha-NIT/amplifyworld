@@ -34,7 +34,7 @@ test("featured artwork is disclosed as concepts without false claims", () => {
 
 test("reveal is a one-shot motion enhancement and respects reduced-motion", () => {
   const reveal = read("components/home/section-reveal.tsx");
-  for (const token of ["IntersectionObserver", "prefers-reduced-motion", "played", "observer.disconnect()", "context.revert()"]) {
+  for (const token of ["IntersectionObserver", "prefers-reduced-motion", "stopped", "observer?.disconnect()", "context.revert()", "motion.removeEventListener"]) {
     assert.ok(reveal.includes(token), token);
   }
 });
