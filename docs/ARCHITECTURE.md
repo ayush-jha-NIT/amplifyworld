@@ -43,6 +43,13 @@ Protected admin routes (implemented in M14) will have role-checked create, updat
 
 ## Database concepts
 
+Module 11 implements these concepts in `apps/api/prisma/schema.prisma`, with
+versioned SQL migrations (including CHECK constraints and timestamp triggers)
+and a lazy Prisma 7 PostgreSQL client in `apps/api/src/db`. See
+[DATABASE.md](DATABASE.md) for the exact model contract, role grants, Neon
+bootstrap, migration/recovery workflow and isolated database tests. This is a
+storage foundation; no public API route or web fixture has been connected yet.
+
 - **Project:** slug, name, description, services/categories, media, published flag, case-study content. Claim metrics may be published only after verification.
 - **Post:** slug, title, excerpt, body, cover image, category, author, timestamps, status, SEO metadata.
 - **Inquiry:** contact identity, company, requested services, message, creation timestamp, notification status.
@@ -63,6 +70,10 @@ Protected admin routes (implemented in M14) will have role-checked create, updat
 ```dotenv
 # API
 DATABASE_URL=
+# Direct schema-owner URL for a separate migration job only:
+DIRECT_URL=
+# Separate disposable local database for migration authoring only:
+SHADOW_DATABASE_URL=
 RESEND_API_KEY=
 RESEND_FROM_EMAIL=
 INQUIRY_NOTIFY_EMAIL=

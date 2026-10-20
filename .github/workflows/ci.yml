@@ -21,6 +21,8 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Build packages and apps
         run: pnpm build
+      - name: Validate database schema without credentials
+        run: pnpm db:validate
       - name: Type check
         run: pnpm typecheck
       - name: Lint
@@ -40,3 +42,38 @@ jobs:
             apps/web/test-results/
             apps/web/playwright-report/
           retention-days: 14
+  database:
+    name: PostgreSQL migrations and contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_USER: postgres
+          # Provisioned only inside this disposable CI service; never Neon.
+          POSTGRES_PASSWORD: ${{ github.run_id }}-${{ github.run_attempt }}
+          POSTGRES_DB: postgres
+        ports:
+          - 127.0.0.1:5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_DATABASE_ADMIN_URL: postgresql://postgres:${{ github.run_id }}-${{ github.run_attempt }}@127.0.0.1:5432/postgres?sslmode=disable
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.13.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build shared service contracts
+        run: pnpm --filter @amplifyworld/shared build
+      - name: Migrate, check drift and test a unique temporary database
+        run: pnpm test:database

@@ -1,0 +1,225 @@
+generator client {
+  provider               = "prisma-client"
+  output                 = "../src/generated/prisma"
+  moduleFormat           = "esm"
+  generatedFileExtension = "ts"
+  importFileExtension    = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum AdminRole {
+  EDITOR
+  ADMIN
+}
+
+enum InquiryStatus {
+  NEW
+  IN_PROGRESS
+  RESOLVED
+  SPAM
+  ARCHIVED
+}
+
+enum NotificationStatus {
+  NOT_REQUESTED
+  PENDING
+  SENT
+  FAILED
+  SKIPPED
+}
+
+enum MediaKind {
+  IMAGE
+  VIDEO
+}
+
+// Identity-provider authentication is implemented in Module 14. No passwords,
+// default accounts or authentication tokens are stored or seeded here.
+model AdminUser {
+  id           String       @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email        String       @unique @db.VarChar(254)
+  displayName  String       @map("display_name") @db.VarChar(100)
+  authProvider String       @map("auth_provider") @db.VarChar(100)
+  authSubject  String       @map("auth_subject") @db.VarChar(255)
+  role         AdminRole    @default(EDITOR)
+  isActive     Boolean      @default(false) @map("is_active")
+  lastLoginAt  DateTime?    @map("last_login_at") @db.Timestamptz(3)
+  createdAt    DateTime     @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt    DateTime     @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+  posts        Post[]
+  projects     Project[]
+  auditEvents  AuditEvent[]
+
+  @@unique([authProvider, authSubject])
+  @@map("admin_users")
+}
+
+// Normalized editorial taxonomy, shared by blog and portfolio.
+model Category {
+  id        String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  slug      String            @unique @db.VarChar(120)
+  name      String            @db.VarChar(100)
+  createdAt DateTime          @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime          @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+  posts     Post[]
+  projects  ProjectCategory[]
+
+  @@map("categories")
+}
+
+// IDs match packages/shared SERVICES. The initial migration inserts only this
+// approved reference data, never sample leads, users or published content.
+model Service {
+  id        String           @id @db.VarChar(40)
+  name      String           @db.VarChar(100)
+  createdAt DateTime         @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime         @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+  inquiries Inquiry[]
+  projects  ProjectService[]
+
+  @@map("services")
+}
+
+model Post {
+  id             String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  slug           String        @unique @db.VarChar(160)
+  title          String        @db.VarChar(200)
+  excerpt        String        @default("") @db.VarChar(500)
+  body           String        @default("") @db.Text
+  coverImageUrl  String?       @map("cover_image_url") @db.VarChar(2048)
+  coverImageAlt  String?       @map("cover_image_alt") @db.VarChar(300)
+  seoTitle       String?       @map("seo_title") @db.VarChar(70)
+  seoDescription String?       @map("seo_description") @db.VarChar(170)
+  status         ContentStatus @default(DRAFT)
+  publishedAt    DateTime?     @map("published_at") @db.Timestamptz(3)
+  authorId       String        @map("author_id") @db.Uuid
+  author         AdminUser     @relation(fields: [authorId], references: [id], onDelete: Restrict)
+  categoryId     String        @map("category_id") @db.Uuid
+  category       Category      @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+  createdAt      DateTime      @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt      DateTime      @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([status, publishedAt(sort: Desc), id])
+  @@index([categoryId, status, publishedAt(sort: Desc)])
+  @@index([authorId])
+  @@map("posts")
+}
+
+model Project {
+  id               String            @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  slug             String            @unique @db.VarChar(160)
+  name             String            @db.VarChar(200)
+  description      String            @default("") @db.VarChar(1000)
+  body             String            @default("") @db.Text
+  clientName       String?           @map("client_name") @db.VarChar(150)
+  websiteUrl       String?           @map("website_url") @db.VarChar(2048)
+  seoTitle         String?           @map("seo_title") @db.VarChar(70)
+  seoDescription   String?           @map("seo_description") @db.VarChar(170)
+  status           ContentStatus     @default(DRAFT)
+  sortOrder        Int               @default(0) @map("sort_order")
+  publishedAt      DateTime?         @map("published_at") @db.Timestamptz(3)
+  // Publishing requires an explicit editorial review of permissions and claims.
+  claimsReviewedAt DateTime?         @map("claims_reviewed_at") @db.Timestamptz(3)
+  createdById      String?           @map("created_by_id") @db.Uuid
+  createdBy        AdminUser?        @relation(fields: [createdById], references: [id], onDelete: SetNull)
+  createdAt        DateTime          @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt        DateTime          @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+  categories       ProjectCategory[]
+  services         ProjectService[]
+  media            ProjectMedia[]
+
+  @@index([status, sortOrder, publishedAt(sort: Desc), id])
+  @@index([createdById])
+  @@map("projects")
+}
+
+model ProjectCategory {
+  projectId  String   @map("project_id") @db.Uuid
+  categoryId String   @map("category_id") @db.Uuid
+  project    Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Restrict)
+
+  @@id([projectId, categoryId])
+  @@index([categoryId, projectId])
+  @@map("project_categories")
+}
+
+model ProjectService {
+  projectId String  @map("project_id") @db.Uuid
+  serviceId String  @map("service_id") @db.VarChar(40)
+  project   Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  service   Service @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+
+  @@id([projectId, serviceId])
+  @@index([serviceId, projectId])
+  @@map("project_services")
+}
+
+model ProjectMedia {
+  id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  projectId String    @map("project_id") @db.Uuid
+  project   Project   @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  kind      MediaKind @default(IMAGE)
+  url       String    @db.VarChar(2048)
+  alt       String    @db.VarChar(300)
+  sortOrder Int       @default(0) @map("sort_order")
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime  @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@unique([projectId, sortOrder])
+  @@map("project_media")
+}
+
+model Inquiry {
+  id                   String             @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name                 String             @db.VarChar(100)
+  email                String             @db.VarChar(254)
+  phone                String?            @db.VarChar(40)
+  company              String?            @db.VarChar(150)
+  message              String             @db.VarChar(5000)
+  // Module 10 collects one service; null represents its explicit "not-sure".
+  serviceId            String?            @map("service_id") @db.VarChar(40)
+  service              Service?           @relation(fields: [serviceId], references: [id], onDelete: Restrict)
+  status               InquiryStatus      @default(NEW)
+  notificationStatus   NotificationStatus @default(NOT_REQUESTED) @map("notification_status")
+  notificationAttempts Int                @default(0) @map("notification_attempts")
+  notifiedAt           DateTime?          @map("notified_at") @db.Timestamptz(3)
+  nextNotificationAt   DateTime?          @map("next_notification_at") @db.Timestamptz(3)
+  // Module 12 must require both for retries; no request payload is duplicated.
+  idempotencyKey       String?            @unique @map("idempotency_key") @db.Uuid
+  requestHash          String?            @map("request_hash") @db.Char(64)
+  retentionExpiresAt   DateTime?          @map("retention_expires_at") @db.Timestamptz(3)
+  createdAt            DateTime           @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt            DateTime           @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@index([status, createdAt(sort: Desc), id])
+  @@index([notificationStatus, nextNotificationAt])
+  @@index([retentionExpiresAt])
+  @@index([serviceId])
+  @@map("inquiries")
+}
+
+// Module 14 must write this in the same transaction as an authorized mutation.
+// Store identifiers and action names only, never lead contents, secrets or tokens.
+model AuditEvent {
+  id         String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  actorId    String?    @map("actor_id") @db.Uuid
+  actor      AdminUser? @relation(fields: [actorId], references: [id], onDelete: SetNull)
+  action     String     @db.VarChar(80)
+  entityType String     @map("entity_type") @db.VarChar(40)
+  entityId   String     @map("entity_id") @db.Uuid
+  createdAt  DateTime   @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  @@index([actorId, createdAt(sort: Desc)])
+  @@index([entityType, entityId, createdAt(sort: Desc)])
+  @@map("audit_events")
+}

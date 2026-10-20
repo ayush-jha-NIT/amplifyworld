@@ -6,6 +6,10 @@ AmplifyWorld helps businesses grow through strategic marketing, technology, bran
 
 > **Development status:** **Modules 0–10 implemented**: requirements, application foundation, design assets, navigation, cinematic homepage, About, interactive Portfolio, inline Blog reader and responsive Contact frontend. **Modules 11–18 remain.** Contact validates details locally; online inquiry submission is unavailable until storage, the API and notification/anti-abuse handling are implemented in Modules 11–13. WhatsApp remains unavailable unless a verified business number is configured.
 
+Module 11's database foundation is under acceptance review. See the
+[database bootstrap guide](docs/DATABASE.md) and [Module 11 report](docs/MODULE_11_REPORT.md).
+Neon has not been provisioned or deployed.
+
 ## Approved experience
 
 - **Homepage**: cinematic black/violet hero with a glowing mountain road, sequential **Strategy → Marketing → Technology → Scalable Growth** milestones, an animated AmplifyWorld mark whose arrow points toward a continuously revolving Earth, service cards and featured projects.
@@ -48,7 +52,7 @@ No paid motion-generation platform is needed for the code-based animations. Moti
 
 ## Development quick start
 
-Use Node.js 22 and pnpm 10.13.1. From the repository root:
+Use Node.js 22.12+ (22 line) or 24+, and pnpm 10.13.1. From the repository root:
 
 ```sh
 corepack enable
@@ -63,6 +67,9 @@ The Contact form’s **Check Inquiry** action validates in this browser only. It
 The independently reviewable design kit lives in [`design-assets/`](design-assets/README.md), with integrated developer instructions in [`docs/design/INTEGRATION_HANDOFF.md`](docs/design/INTEGRATION_HANDOFF.md). The large preview assets are not production page backgrounds.
 
 ## Project documents
+
+- [Database setup, migrations, security and recovery](docs/DATABASE.md)
+- [Module 11 database foundation and validation](docs/MODULE_11_REPORT.md)
 
 - [Module 10 Contact implementation and validation](docs/MODULE_10_REPORT.md)
 

@@ -26,6 +26,10 @@
 
 ## Dependencies
 
+Module 11's database foundation is in acceptance review; see
+[its report](MODULE_11_REPORT.md) and [database guide](DATABASE.md). Neon has not
+been provisioned or deployed, and public inquiry submission remains unavailable.
+
 Current implementation: Modules 0–10. Module 10 delivers the Contact frontend with
 local validation and unavailable-submission messaging. Inquiry persistence, the
 public endpoint and email/anti-abuse remain in Modules 11–13; the frontend does

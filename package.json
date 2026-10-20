@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "packageManager": "pnpm@10.13.1",
   "engines": {
-    "node": ">=22"
+    "node": "^22.12.0 || >=24.0.0"
   },
   "scripts": {
     "dev": "pnpm --filter @amplifyworld/shared build && pnpm --parallel --filter @amplifyworld/web --filter @amplifyworld/api dev",
@@ -12,6 +12,12 @@
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
-    "check": "pnpm build && pnpm typecheck && pnpm lint && pnpm test"
+    "check": "pnpm build && pnpm typecheck && pnpm lint && pnpm test",
+    "db:generate": "pnpm --filter @amplifyworld/api db:generate",
+    "db:validate": "pnpm --filter @amplifyworld/api db:validate",
+    "db:migrate:deploy": "pnpm --filter @amplifyworld/api db:migrate:deploy",
+    "db:migrate:status": "pnpm --filter @amplifyworld/api db:migrate:status",
+    "db:migrate:dev": "pnpm --filter @amplifyworld/api db:migrate:dev",
+    "test:database": "pnpm --filter @amplifyworld/api test:database"
   }
 }

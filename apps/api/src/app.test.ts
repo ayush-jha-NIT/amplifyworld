@@ -35,3 +35,20 @@ test("unknown route returns 404", async () => {
     });
   }
 });
+
+test("Module 11 does not enable inquiry collection or public content endpoints", async () => {
+  const server = createApp().listen(0);
+  try {
+    await once(server, "listening");
+    const address = server.address() as AddressInfo;
+    for (const [method, path] of [
+      ["POST", "/api/v1/inquiries"], ["GET", "/api/v1/posts"], ["GET", "/api/v1/projects"]
+    ]) {
+      const response = await fetch(`http://127.0.0.1:${address.port}${path}`, { method });
+      assert.equal(response.status, 404);
+      assert.deepEqual(await response.json(), { error: "Not found" });
+    }
+  } finally {
+    await new Promise<void>((resolve, reject) => server.close((error) => error ? reject(error) : resolve()));
+  }
+});
