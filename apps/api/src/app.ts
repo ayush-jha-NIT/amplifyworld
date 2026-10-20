@@ -24,6 +24,7 @@ export function createApp(options: Parameters<typeof createPublicRouter>[0] = {}
   app.use("/api/v1", createPublicRouter(options));
 
   const handleError: ErrorRequestHandler = (err: unknown, _request, response, _next) => {
+    void _next;
     const info = err as { status?: number; type?: string };
     const tooLarge = info?.status === 413;
     response.status(tooLarge ? 413 : 400).json({
