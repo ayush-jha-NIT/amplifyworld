@@ -34,7 +34,7 @@ export function SiteFooter() {
             <p>One connected partner for modern business growth.</p>
           </div>
           <nav className="footer-navigation" aria-label="Footer navigation">
-            <h3>Explore</h3>
+            <h2>Explore</h2>
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/portfolio">Our Work</Link>
@@ -42,7 +42,7 @@ export function SiteFooter() {
             <Link href="/contact">Contact</Link>
           </nav>
           <div className="footer-services">
-            <h3>Growth services</h3>
+            <h2>Growth services</h2>
             <ul>
               {SERVICES.map((service) => <li key={service.id}>{service.title}</li>)}
             </ul>
