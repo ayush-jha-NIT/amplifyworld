@@ -36,7 +36,7 @@ test("unknown route returns 404", async () => {
   }
 });
 
-test("Module 11 does not enable inquiry collection or public content endpoints", async () => {
+test("Module 12 endpoints fail closed when database and collection are unconfigured", async () => {
   const server = createApp().listen(0);
   try {
     await once(server, "listening");
@@ -45,8 +45,9 @@ test("Module 11 does not enable inquiry collection or public content endpoints",
       ["POST", "/api/v1/inquiries"], ["GET", "/api/v1/posts"], ["GET", "/api/v1/projects"]
     ]) {
       const response = await fetch(`http://127.0.0.1:${address.port}${path}`, { method });
-      assert.equal(response.status, 404);
-      assert.deepEqual(await response.json(), { error: "Not found" });
+      assert.equal(response.status, 503);
+      const payload = await response.json() as { error?: { code: string } };
+      assert.ok(payload.error?.code);
     }
   } finally {
     await new Promise<void>((resolve, reject) => server.close((error) => error ? reject(error) : resolve()));

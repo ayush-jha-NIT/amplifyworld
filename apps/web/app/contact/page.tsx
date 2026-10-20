@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { InquiryForm } from "@/components/contact/inquiry-form";
+import { ContactInquiry } from "@/components/contact/contact-inquiry";
 import { SectionReveal } from "@/components/home/section-reveal";
 import { getWhatsAppHref, WhatsAppCta } from "@/components/whatsapp-cta";
 
@@ -17,6 +17,7 @@ const nextSteps = [
 ];
 
 export default function ContactPage() {
+  const inquiriesAvailable = process.env.NEXT_PUBLIC_INQUIRIES_ENABLED === "true" && Boolean(process.env.NEXT_PUBLIC_API_URL);
   const whatsappAvailable = Boolean(getWhatsAppHref(process.env.NEXT_PUBLIC_WHATSAPP_NUMBER));
 
   return (
@@ -33,7 +34,7 @@ export default function ContactPage() {
               <a className="contact-secondary" href="#inquiry">Send Your Inquiry <span aria-hidden="true">↓</span></a>
             </div>
             <p className="contact-availability">
-              Online submission is not available yet.
+              {inquiriesAvailable ? "Online inquiry submission requires a working, configured API." : "Online submission is not available yet."}
               {!whatsappAvailable && " WhatsApp will open once our verified business number is configured."}
             </p>
           </div>
@@ -69,7 +70,7 @@ export default function ContactPage() {
               <a className="contact-card contact-channel" href="#inquiry" data-reveal>
                 <Image src="/design/icons/mail.svg" alt="" width={32} height={32} className="contact-icon" />
                 <div><h3>Share Your Project</h3>
-                  <p>Prepare and check your project details. Online submission is not open yet.</p>
+                  <p>Prepare your project details. {inquiriesAvailable ? "Send when the API confirms availability." : "Online submission is not open yet."}</p>
                   <span className="contact-text-link">View inquiry form <span aria-hidden="true">↓</span></span>
                 </div>
               </a>
@@ -79,7 +80,7 @@ export default function ContactPage() {
 
         <section className="contact-section contact-form-section" id="inquiry" aria-labelledby="inquiry-title">
           <div className="contact-grid">
-            <InquiryForm />
+            <ContactInquiry />
             <aside aria-labelledby="contact-next-title">
               <div className="contact-card contact-next">
                 <p className="eyebrow">A simple process</p>
@@ -95,7 +96,7 @@ export default function ContactPage() {
               <div className="contact-aside-note">
                 <h3>Built around your business.</h3>
                 <p>Strategic guidance. Connected expertise. A clear next step.</p>
-                <p>Inquiry delivery is coming soon. No response time is promised while contact services are unavailable.</p>
+                <p>Inquiry delivery requires the configured API. No email notification or response time is promised yet.</p>
               </div>
             </aside>
           </div>
