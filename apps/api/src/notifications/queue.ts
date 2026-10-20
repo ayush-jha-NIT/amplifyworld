@@ -79,5 +79,5 @@ export const prismaNotificationQueue: NotificationQueue = {
 
 export function nextRetrySeconds(attempts: number, retryAfterSeconds = 0): number {
   const schedule = [60, 300, 900, 3600];
-  return Math.min(3600, Math.max(schedule[Math.max(0, Math.min(3, attempts - 1))], retryAfterSeconds));
+  return Math.min(3600, Math.max(schedule[Math.max(0, Math.min(3, attempts - 1))] ?? 60, retryAfterSeconds));
 }
