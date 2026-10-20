@@ -26,8 +26,7 @@
 - Clean pnpm install
 - Next.js + Express builds and TypeScript check
 - Next.js/Express lint, shared tests, homepage section contract tests
-- **PR CI passed:** [GitHub Actions run #39410605072](https://github.com/ayush-jha-NIT/amplifyworld/actions/runs/39410605072) successfully ran dependency install, Next.js/Express production build, TypeScript, lint and Node tests. [PR #5](https://github.com/ayush-jha-NIT/amplifyworld/pull/5) was merged as [be41557](https://github.com/ayush-jha-NIT/amplifyworld/commit/be415574aad3626aeee76809c05030bf747ba044).
-- Verify final `main` CI on the documentation status commit.
+- Verify the Merge PR CI and subsequent `main` CI before calling the module complete.
 
 ## Remaining scope
 

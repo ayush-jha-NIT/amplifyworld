@@ -4,7 +4,7 @@
 
 AmplifyWorld helps businesses grow through strategic marketing, technology, branding, web development, SEO, GEO and AI automation. This repository is the planned production website for the agency.
 
-> **Development status:** **Modules 0–6 implemented and merged into `main`**: planning, Next.js/Express foundation, design system, original assets, global layout, the cinematic 3D-Earth hero and the remaining responsive homepage sections. **Modules 7–18 remain.** About, Portfolio, Blog, Contact and backend services will be completed in their upcoming modules.
+> **Development status:** **Modules 0–5 implemented and merged into `main`**: specification, Next.js/Express monorepo, design system, original visual assets, responsive shared layout and the cinematic animated mountain-to-3D-Earth homepage hero. **Modules 6–18 remain.** Other homepage sections and page-specific experiences await their designated modules.
 
 ## Approved experience
 
@@ -62,7 +62,6 @@ The independently reviewable design kit lives in [`design-assets/`](design-asset
 
 ## Project documents
 
-- [Module 6 complete homepage sections](docs/MODULE_06_REPORT.md)
 - [Module 5 cinematic hero and validation](docs/MODULE_05_REPORT.md)
 
 - [Module 4 implementation report](docs/MODULE_04_REPORT.md)
