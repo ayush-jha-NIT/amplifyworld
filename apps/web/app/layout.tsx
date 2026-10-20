@@ -1,37 +1,32 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { PageTransition } from "@/components/page-transition";
 import "./globals.css";
+
+const jakarta = localFont({
+  src: "../public/design/fonts/PlusJakartaSans-Variable.ttf",
+  weight: "200 800",
+  style: "normal",
+  variable: "--font-jakarta",
+  display: "swap"
+});
 
 export const metadata: Metadata = {
   title: { default: "AmplifyWorld | Business Growth", template: "%s | AmplifyWorld" },
-  description: "Strategy, performance marketing, SEO, websites and AI-powered solutions for sustainable business growth."
+  description: "AmplifyWorld helps businesses grow with marketing, SEO, GEO, custom websites and AI-powered solutions."
 };
-
-const routes = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" }
-];
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en">
-      <body>
-        <header className="site-header">
-          <div className="nav-shell">
-            <Link href="/" className="brand" aria-label="AmplifyWorld homepage">Amplify<span>World</span></Link>
-            <nav className="nav-links" aria-label="Main navigation">
-              {routes.map((route) => <Link href={route.href} key={route.href}>{route.label}</Link>)}
-            </nav>
-          </div>
-        </header>
-        {children}
-        <footer className="site-footer">
-          <div className="content-shell">© {new Date().getFullYear()} AmplifyWorld · Strategy | Technology | Marketing</div>
-        </footer>
+      <body className={jakarta.variable}>
+        <a className="skip-link" href="#main-content">Skip to content</a>
+        <SiteHeader />
+        <PageTransition>{children}</PageTransition>
+        <SiteFooter />
       </body>
     </html>
   );
