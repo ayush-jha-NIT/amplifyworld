@@ -58,6 +58,7 @@ async function main() {
       await owner.query(`GRANT SELECT, INSERT, UPDATE, DELETE ON
         admin_users, categories, posts, projects, project_categories,
         project_services, project_media, inquiries TO "${role}"`);
+      await owner.query(`GRANT SELECT, INSERT, UPDATE, DELETE ON inquiry_rate_buckets TO "${role}"`);
       await owner.query(`GRANT SELECT ON services TO "${role}"`);
       await owner.query(`GRANT SELECT, INSERT ON audit_events TO "${role}"`);
     } finally {
