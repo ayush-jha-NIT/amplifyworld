@@ -15,7 +15,7 @@ export function createApp(options: Parameters<typeof createPublicRouter>[0] = {}
 
   const allowedOrigins = (process.env.CLIENT_ORIGIN ?? "http://localhost:3000,http://127.0.0.1:3000")
     .split(",").map((value) => value.trim()).filter(Boolean);
-  app.use(cors({ origin: allowedOrigins, methods: ["GET", "POST", "OPTIONS"] }));
+  app.use(cors({ origin: allowedOrigins, methods: ["GET", "POST", "PATCH", "OPTIONS"] }));
   app.use(express.json({ limit: "20kb", strict: true }));
 
   app.get("/health", (_request, response) => {

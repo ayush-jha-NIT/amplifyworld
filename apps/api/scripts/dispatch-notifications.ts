@@ -1,4 +1,5 @@
 import "dotenv/config";
+import { assertDeploymentEnvironment } from "../src/deployment/config.js";
 import { disconnectDatabase } from "../src/db/client.js";
 import { prismaNotificationQueue } from "../src/notifications/queue.js";
 import { runNotificationCycle } from "../src/notifications/processor.js";
@@ -6,6 +7,7 @@ import { createResendSender, resendSettings } from "../src/notifications/resend.
 import { workerEnabled } from "../src/notifications/settings.js";
 
 async function main() {
+  assertDeploymentEnvironment(process.env, "worker");
   if (!workerEnabled(process.env)) {
     throw new Error("Notification dispatch disabled: approved database, privacy and email settings required");
   }

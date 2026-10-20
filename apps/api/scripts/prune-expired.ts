@@ -1,8 +1,10 @@
 import "dotenv/config";
+import { assertDeploymentEnvironment } from "../src/deployment/config.js";
 import { getDatabase, disconnectDatabase } from "../src/db/client.js";
 
 /** Schedule independently after a reviewed retention/deletion policy is approved. */
 async function main() {
+  assertDeploymentEnvironment(process.env, "retention");
   if (process.env.INQUIRY_PRIVACY_POLICY_APPROVED !== "true" || !process.env.DATABASE_URL ||
       process.env.INQUIRY_RETENTION_CLEANUP_ENABLED !== "true") {
     throw new Error("Retention cleanup requires approved policy, database and explicit enablement");

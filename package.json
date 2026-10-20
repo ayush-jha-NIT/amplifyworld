@@ -21,6 +21,8 @@
     "test:database": "pnpm --filter @amplifyworld/api test:database",
     "notifications:dispatch": "pnpm --filter @amplifyworld/api notifications:dispatch",
     "retention:prune": "pnpm --filter @amplifyworld/api retention:prune",
-    "admin:bootstrap": "pnpm --filter @amplifyworld/api admin:bootstrap"
+    "admin:bootstrap": "pnpm --filter @amplifyworld/api admin:bootstrap",
+    "deployment:check": "pnpm --filter @amplifyworld/api deployment:check",
+    "deployment:smoke": "pnpm --filter @amplifyworld/api deployment:smoke"
   }
 }
