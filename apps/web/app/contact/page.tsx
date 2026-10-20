@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
+import { StructuredData } from "@/components/structured-data";
+import { absolutePublicUrl, marketingWebPage } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 import { ContactInquiry } from "@/components/contact/contact-inquiry";
 import { SectionReveal } from "@/components/home/section-reveal";
 import { getWhatsAppHref, WhatsAppCta } from "@/components/whatsapp-cta";
 
+const pageDescription = "Contact AmplifyWorld to discuss marketing, SEO, GEO, websites or AI-enabled digital experiences. Check available contact options.";
+const canonical = absolutePublicUrl("/contact");
 export const metadata: Metadata = {
-  title: "Contact",
-  description: "Explore a conversation with AmplifyWorld about strategy, marketing and technology. Prepare your project inquiry and check available contact options."
+  title: "Contact", description: pageDescription,
+  ...(canonical ? { alternates: { canonical },
+    openGraph: { title: "Contact | AmplifyWorld", description: pageDescription, url: canonical },
+    twitter: { title: "Contact | AmplifyWorld", description: pageDescription } } : {})
 };
 
 const nextSteps = [
@@ -22,6 +28,7 @@ export default function ContactPage() {
 
   return (
     <main className="contact-page">
+      <StructuredData data={marketingWebPage("/contact", "Contact | AmplifyWorld", pageDescription)} />
       <section className="contact-hero" aria-labelledby="contact-title">
         <div className="content-shell contact-hero-grid">
           <div className="contact-hero-copy">

@@ -1431,3 +1431,19 @@ body:has(.blog-page) .footer-invitation{display:none}
 @media(max-width:830px){.admin-grid{grid-template-columns:1fr}}
 @media(max-width:500px){.admin-shell,.admin-setup{padding-inline:15px}.admin-record{display:grid}}
 @media(prefers-reduced-motion:reduce){.admin-shell *{animation:none!important;transition:none!important}}
+
+/* Module 15 accessibility: keyboard visibility, forced colors and fallback layout. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #f3b8ff;
+  outline-offset: 3px;
+}
+@media (forced-colors: active) {
+  :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid Highlight;
+  }
+}
+.not-found-page { padding-block: clamp(96px, 12vw, 170px); min-height: 50vh; }
+.not-found-page h1 { font-size: clamp(32px, 5vw, 54px); margin: 22px 0; }
+.not-found-page p:not(.eyebrow) { max-width: 50ch; }
+.not-found-page a { display: inline-flex; margin-top: 20px; padding: 13px 18px;
+  border: 1px solid #a765d2; border-radius: 999px; }

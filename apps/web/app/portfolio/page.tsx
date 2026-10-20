@@ -34,8 +34,8 @@ export default function PortfolioPage() {
             </div>
           </div>
           <div className="portfolio-hero-stack" aria-hidden="true">
-            <div className="portfolio-hero-frame portfolio-hero-frame-back"><Image src="/design/templates/project-local.svg" alt="" width={1200} height={800} priority /></div>
-            <div className="portfolio-hero-frame portfolio-hero-frame-middle"><Image src="/design/templates/project-campaign.svg" alt="" width={1200} height={800} priority /></div>
+            <div className="portfolio-hero-frame portfolio-hero-frame-back"><Image src="/design/templates/project-local.svg" alt="" width={1200} height={800} loading="lazy" /></div>
+            <div className="portfolio-hero-frame portfolio-hero-frame-middle"><Image src="/design/templates/project-campaign.svg" alt="" width={1200} height={800} loading="lazy" /></div>
             <div className="portfolio-hero-frame portfolio-hero-frame-front"><Image src="/design/templates/project-website.svg" alt="" width={1200} height={800} priority /></div>
           </div>
         </div>

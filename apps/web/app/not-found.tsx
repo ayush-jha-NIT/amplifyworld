@@ -1,14 +1,13 @@
 import Link from "next/link";
-
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Page not found", robots: { index: false, follow: false }
+};
 export default function NotFound() {
-  return (
-    <main className="content-shell">
-      <section className="hero">
-        <p className="eyebrow">404 · Page not found</p>
-        <h1>A Different <span className="gradient-text">Direction.</span></h1>
-        <p className="lead">This page could not be found. Return to AmplifyWorld to discover our services.</p>
-        <Link className="action" href="/">Back to Home</Link>
-      </section>
-    </main>
-  );
+  return <main className="content-shell not-found-page">
+    <p className="eyebrow">Page not found</p>
+    <h1>This page is not available.</h1>
+    <p>The address may have changed, or the content may not have been published.</p>
+    <Link href="/">Return to AmplifyWorld home <span aria-hidden="true">↗</span></Link>
+  </main>;
 }

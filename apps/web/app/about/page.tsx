@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { StructuredData } from "@/components/structured-data";
+import { absolutePublicUrl, marketingWebPage } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 import { SERVICES } from "@amplifyworld/shared";
@@ -6,9 +8,13 @@ import { SectionReveal } from "@/components/home/section-reveal";
 import { serviceDetails } from "@/components/home/home-content";
 import { WhatsAppCta } from "@/components/whatsapp-cta";
 
+const pageDescription = "Learn how AmplifyWorld brings strategy, marketing, technology and creative execution together for modern businesses.";
+const canonical = absolutePublicUrl("/about");
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Meet AmplifyWorld, a growth-focused agency connecting strategy, technology, performance marketing, websites, SEO, GEO and creative execution."
+  title: "About Us", description: pageDescription,
+  ...(canonical ? { alternates: { canonical },
+    openGraph: { title: "About Us | AmplifyWorld", description: pageDescription, url: canonical },
+    twitter: { title: "About Us | AmplifyWorld", description: pageDescription } } : {})
 };
 
 const values = [
@@ -74,6 +80,7 @@ function AboutIcon({ name, className = "" }: { name: string; className?: string 
 export default function AboutPage() {
   return (
     <main className="about-page">
+      <StructuredData data={marketingWebPage("/about", "About Us | AmplifyWorld", pageDescription)} />
       <section className="about-hero" aria-labelledby="about-page-title">
         <div className="content-shell about-hero-grid">
           <div className="about-hero-copy">
