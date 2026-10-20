@@ -10,7 +10,6 @@ const db = getDatabase();
 const slug = "m12-" + randomUUID().slice(0, 8);
 let authorId = "";
 let categoryId = "";
-let projectId = "";
 let server: ReturnType<ReturnType<typeof createApp>["listen"]>;
 let base = "";
 const inquiry = {
@@ -34,11 +33,10 @@ before(async () => {
     data: { slug: slug + "-published", title: "Published", excerpt: "Review excerpt", body: "Reviewed body",
       authorId, categoryId, status: "PUBLISHED", publishedAt: new Date() }
   });
-  const project = await db.project.create({
+  await db.project.create({
     data: { slug: slug + "-published", name: "Published concept", description: "Reviewed",
       body: "Approved text", status: "PUBLISHED", publishedAt: new Date(), claimsReviewedAt: new Date() }
   });
-  projectId = project.id;
   await db.project.create({ data: { slug: slug + "-draft", name: "Private project" } });
   server = createApp({ collectionEnabled: true, privacyApproved: true, retentionDays: 30 }).listen(0);
   await once(server, "listening");
