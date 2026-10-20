@@ -223,7 +223,7 @@ export default function AboutPage() {
 
         <SectionReveal>
           <section className="about-final-cta" aria-labelledby="about-final-title" data-reveal>
-            <p className="eyebrow">Let's build what comes next</p>
+            <p className="eyebrow">Let&apos;s build what comes next</p>
             <h2 id="about-final-title">Ready to <span className="gradient-text">Amplify</span> Your Business?</h2>
             <p>
               Let&apos;s talk about your goals and build a thoughtful path to growth
