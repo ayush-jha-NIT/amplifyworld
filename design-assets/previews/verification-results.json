@@ -1,0 +1,2982 @@
+{
+  "date": "2026-10-20",
+  "checks": [
+    {
+      "name": "File exists: design-assets/LICENSES_AND_PROVENANCE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/LICENSES_AND_PROVENANCE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/content.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/content.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/earth-study.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/earth-study.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/earth-study.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/earth-study.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/preview.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/preview.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/styles.css",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/styles.css",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/vendor/LICENSE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/vendor/LICENSE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/vendor/three.core.min.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/vendor/three.core.min.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/catalogue/vendor/three.module.min.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/vendor/three.module.min.js",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/contact-envelope-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/contact-envelope-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/contact-envelope-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/contact-envelope-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/contact-envelope.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-ai-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-ai-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-ai-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-ai-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-ai.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-search-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-search-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-search-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-search-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-search.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-social-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-social-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-social-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-social-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-social.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-strategy-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-strategy-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-strategy-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-strategy-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-strategy.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-arrow.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-arrow.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-circular.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-circular-original.jpg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-compact.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-compact.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-emblem.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-emblem.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-wide.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/brand/logo-wide.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/fonts/OFL.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/exports/fonts/OFL.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/fonts/PlusJakartaSans-Variable.ttf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/exports/fonts/PlusJakartaSans-Variable.ttf",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/agent.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/agent.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/arrow.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/arrow.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/check.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/check.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/clock.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/clock.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/close.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/close.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/company.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/company.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/discover.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/discover.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/empty.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/empty.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/execute.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/execute.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/innovation.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/innovation.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/link.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/link.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/mail.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/mail.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/menu.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/menu.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/mission.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/mission.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/partnership.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/partnership.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/performance.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/performance.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/person.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/person.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/phone.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/phone.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/results.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/results.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/transparency.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/transparency.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/vision.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/vision.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/warning.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/warning.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/icons/whatsapp.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/whatsapp.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-albedo-1024.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-albedo.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-albedo-2048.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-albedo.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-beauty-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-beauty.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-beauty-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-beauty.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-beauty-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-beauty.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-beauty-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-beauty.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-emissive-2048.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-albedo.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-orbits.glb",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/build-glb.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-surface-1024.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-surface.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-surface-1024.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-surface.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-surface-2048.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-surface.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/earth-surface-2048.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-surface.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/foreground.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/foreground.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/globe-fallback-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/globe-fallback-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/globe-fallback-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/globe-fallback-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/globe-fallback.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/milestone-marketing.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-marketing.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/milestone-scalable-growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-scalable-growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/milestone-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/milestone-technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/mountain-distant.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-distant.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/mountain-main-1200.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/mountain-main-1200.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/mountain-main-1536.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/mountain-main-1536.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/mountain-main-640.avif",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/mountain-main-640.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/node.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/node.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/orbits.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/orbits.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/road.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/road.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/scene/starfield.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/starfield.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/templates/device-desktop.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/device-desktop.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/templates/device-mobile.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/device-mobile.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/templates/project-campaign.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/project-campaign.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/templates/project-local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/project-local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/exports/templates/project-website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/project-website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/package-lock.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/package-lock.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/package.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/package.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/about-1024.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/about-1440.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/about-1440.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/about-375.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/about-390.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/about-390.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/about-768.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/about.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/all-pages-desktop.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-1024.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-1440.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-1440.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-375.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-390.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-390.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-768.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-reader-1024.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-reader-1440.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-reader-375.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-reader-390.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/blog-reader-768.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/blog.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/comparisons/about.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/comparisons/blog.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/comparisons/contact.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/comparisons/home.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/comparisons/portfolio.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/component-catalogue.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/contact-1024.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/contact-1440.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/contact-1440.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/contact-375.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/contact-390.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/contact-390.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/contact-768.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/earth-study.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/home-1024.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/home-1440.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/home-1440.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/home-375.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/home-390.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/home-390.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/home-768.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/home.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/layout-checks.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/portfolio-1024.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/portfolio-1440.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/portfolio-1440.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/portfolio-375.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/portfolio-390.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/portfolio-390.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/portfolio-768.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/portfolio.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/states/carousel-active.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/states/carousel-empty.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/states/carousel-entering.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/states/contact-error.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/states/contact-failed.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/states/contact-loading.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/states/contact-success.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-1.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-2.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-3.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-4.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-5.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-6.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-7.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/storyboard/beat-8.webp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/previews/verification-results.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/catalogue/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/GENERATION_LOG.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/GENERATION_LOG.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/contact-envelope.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-ai.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/artwork/editorial-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/logo-arrow.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-arrow.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/logo-circular-original.jpg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-circular-original.jpg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/logo-compact.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-compact.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/logo-emblem.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-emblem.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide-original.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/logo-wide.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/logo-wide.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/palette-samples.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/palette-samples.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/brand/regions.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/brand/regions.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/agent.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/agent.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/arrow.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/arrow.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/check.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/check.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/clock.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/clock.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/close.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/close.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/company.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/company.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/discover.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/discover.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/empty.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/empty.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/execute.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/execute.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/innovation.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/innovation.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/link.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/link.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/mail.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/mail.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/menu.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/menu.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/mission.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/mission.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/partnership.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/partnership.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/performance.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/performance.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/person.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/person.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/phone.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/phone.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/results.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/results.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/search.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/social.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/transparency.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/transparency.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/vision.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/vision.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/warning.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/warning.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/icons/whatsapp.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/icons/whatsapp.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/references/about-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/references/about-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/references/blog-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/references/blog-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/references/contact-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/references/contact-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/references/home-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/references/home-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/references/portfolio-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/references/portfolio-approved.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/Earth.reference.tsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/Earth.reference.tsx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/earth-albedo.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-albedo.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/earth-beauty.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-beauty.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/earth-scene.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-scene.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/earth-surface.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/earth-surface.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/foreground.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/foreground.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/globe-fallback.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/hero-timeline.ts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/hero-timeline.ts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/milestone-marketing.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-marketing.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/milestone-scalable-growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-scalable-growth.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/milestone-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-strategy.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/milestone-technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/milestone-technology.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/mountain-distant.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-distant.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/mountain-main.png",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/ne_110m_land.geojson",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/ne_110m_land.geojson",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/node.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/node.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/orbits.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/orbits.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/road.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/road.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/scene-layout.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/scene-layout.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/scene/starfield.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/scene/starfield.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/tailwind-mapping.ts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/tailwind-mapping.ts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/templates/device-desktop.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/device-desktop.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/templates/device-mobile.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/device-mobile.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/templates/project-campaign.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/project-campaign.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/templates/project-local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/project-local.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/templates/project-website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/templates/project-website.svg",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/tokens.css",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/tokens.css",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/source/tokens.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/source/tokens.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/build-assets.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/build-assets.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/build-glb.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/build-glb.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/build-pages.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/build-pages.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/capture.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/capture.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/comparison-boards.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/comparison-boards.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/manifest.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/manifest.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/serve.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/serve.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "File exists: design-assets/tools/verify.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Source exists: design-assets/tools/verify.cjs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "25 page/width combinations captured",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No horizontal page overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No missing images in page captures",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Body on canvas contrast",
+      "passed": true,
+      "detail": "18.97"
+    },
+    {
+      "name": "Muted on surface contrast",
+      "passed": true,
+      "detail": "10.11"
+    },
+    {
+      "name": "Primary button start contrast",
+      "passed": true,
+      "detail": "6.94"
+    },
+    {
+      "name": "Primary button end contrast",
+      "passed": true,
+      "detail": "5.64"
+    },
+    {
+      "name": "Error on surface contrast",
+      "passed": true,
+      "detail": "11.85"
+    },
+    {
+      "name": "Focus on canvas contrast",
+      "passed": true,
+      "detail": "12.5"
+    },
+    {
+      "name": "GLB header and byte length",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GLB has animatable nodes and embedded texture",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Carousel changes active project",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Empty filter state visible",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Project detail dialog opens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Escape closes detail dialog",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Blog uses same pathname with query",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Full article content available",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Back closes inline reader",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Forward restores reader",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Direct article link resolves",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Invalid form identifies first field",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Form success explicitly simulated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Failed form preserves input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "WhatsApp missing-number state is truthful",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile menu opens",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Mobile Escape restores disclosure",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Reduced motion resolves to final hero",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No-WebGL fallback displayed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Earth study WebGL active",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Earth motion pause works",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "No uncaught browser errors",
+      "passed": true,
+      "detail": "[]"
+    }
+  ],
+  "contrasts": [
+    {
+      "name": "Body on canvas",
+      "ratio": 18.97,
+      "minimum": 4.5
+    },
+    {
+      "name": "Muted on surface",
+      "ratio": 10.11,
+      "minimum": 4.5
+    },
+    {
+      "name": "Primary button start",
+      "ratio": 6.94,
+      "minimum": 4.5
+    },
+    {
+      "name": "Primary button end",
+      "ratio": 5.64,
+      "minimum": 4.5
+    },
+    {
+      "name": "Error on surface",
+      "ratio": 11.85,
+      "minimum": 4.5
+    },
+    {
+      "name": "Focus on canvas",
+      "ratio": 12.5,
+      "minimum": 4.5
+    }
+  ],
+  "summary": {
+    "passed": 587,
+    "failed": 0
+  },
+  "limitations": [
+    "Not a production frontend build",
+    "No real device thermal/FPS validation",
+    "No screen-reader certification",
+    "Production WhatsApp and inquiry delivery pending verified data and later modules"
+  ]
+}

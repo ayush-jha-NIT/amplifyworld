@@ -1,0 +1,60 @@
+{
+  "canvas": [
+    1000,
+    800
+  ],
+  "roadPath": "M 60 710 C 240 720 760 650 820 575 C 870 510 590 555 655 475 C 695 427 820 448 735 392 C 695 362 625 365 625 330",
+  "milestones": [
+    {
+      "id": "strategy",
+      "label": "Strategy",
+      "x": 333,
+      "y": 677,
+      "t": 1.1
+    },
+    {
+      "id": "marketing",
+      "label": "Marketing",
+      "x": 745,
+      "y": 610,
+      "t": 2.1
+    },
+    {
+      "id": "technology",
+      "label": "Technology",
+      "x": 662,
+      "y": 490,
+      "t": 3.2
+    },
+    {
+      "id": "scalable-growth",
+      "label": "Scalable Growth",
+      "x": 625,
+      "y": 330,
+      "t": 4.3
+    }
+  ],
+  "globe": {
+    "x": 685,
+    "y": 249,
+    "r": 285
+  },
+  "logo": {
+    "x": 350,
+    "y": 72,
+    "w": 320,
+    "h": 194
+  },
+  "layerOrder": [
+    "starfield",
+    "globe-back-orbits",
+    "globe",
+    "mountain-distant",
+    "mountain-main",
+    "road",
+    "milestones",
+    "logo",
+    "foreground",
+    "front-orbits"
+  ]
+}

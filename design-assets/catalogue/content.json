@@ -1,0 +1,77 @@
+{
+  "services": [
+    [
+      "performance",
+      "Meta Ads & Performance Marketing",
+      "Campaign strategy, conversion tracking, optimization and reporting."
+    ],
+    [
+      "local",
+      "Google Business Profile Optimization",
+      "A stronger local presence that helps people discover your business."
+    ],
+    [
+      "website",
+      "Growth-Focused Website Development",
+      "Custom websites shaped around your business, users and growth goals."
+    ],
+    [
+      "search",
+      "SEO & GEO Optimization",
+      "Search visibility and content structured for generative discovery."
+    ],
+    [
+      "agent",
+      "Agentic AI for Web",
+      "Useful AI tools and workflows, tailored to the needs of your website."
+    ],
+    [
+      "social",
+      "Social Media Management",
+      "From shooting and editing to publishing and ongoing management."
+    ]
+  ],
+  "projects": [
+    [
+      "website",
+      "Growth website concept",
+      "Web Development"
+    ],
+    [
+      "local",
+      "Local discovery concept",
+      "SEO & GEO"
+    ],
+    [
+      "campaign",
+      "Campaign concept",
+      "Performance Marketing"
+    ]
+  ],
+  "articles": [
+    [
+      "search",
+      "A clearer path from search to your business",
+      "SEO & GEO",
+      "Design sample · 5 min read"
+    ],
+    [
+      "ai",
+      "Give every website interaction a purpose",
+      "Agentic AI",
+      "Design sample · 4 min read"
+    ],
+    [
+      "strategy",
+      "Start with the business. Build the growth plan.",
+      "Strategy",
+      "Design sample · 4 min read"
+    ],
+    [
+      "social",
+      "One message. A more coherent social presence.",
+      "Social Media",
+      "Design sample · 4 min read"
+    ]
+  ]
+}

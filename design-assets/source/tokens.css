@@ -1,0 +1,4 @@
+@font-face{font-family:Jakarta;src:url("../exports/fonts/PlusJakartaSans-Variable.ttf") format("truetype");font-weight:200 800;font-display:swap}
+:root{color-scheme:dark;--canvas:#03040a;--surface:#0b0b16;--raised:#161024;--text:#f8f5fc;--muted:#beb7ce;--subtle:#998fae;--border:#443052;--focus:#edb7ff;--purple:#5003dc;--violet:#9d17f8;--magenta:#d94efb;--success:#9ae0c2;--error:#ffb5cb;--brand:linear-gradient(110deg,#5003dc,#9d17f8 58%,#d94efb);--button:linear-gradient(110deg,#7900d8,#9b07db);--glass:linear-gradient(135deg,rgba(49,19,74,.72),rgba(11,11,22,.96) 58%);--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s6:48px;--s8:64px;--s12:96px;--radius-control:12px;--radius-card:16px;--radius-feature:24px;--max:1320px;--gutter:60px;--font:Jakarta,Arial,sans-serif;--focus-shadow:0 0 0 3px #03040a,0 0 0 5px #edb7ff;--ease:cubic-bezier(.22,1,.36,1)}
+@media(max-width:1099px){:root{--gutter:32px}}
+@media(max-width:639px){:root{--gutter:20px}}

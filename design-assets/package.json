@@ -1,0 +1,16 @@
+{
+  "name": "amplifyworld-design-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Isolated Module 2–3 design and asset production workspace; not the production application.",
+  "scripts": {
+    "assets": "node tools/build-assets.cjs",
+    "preview": "node tools/serve.cjs",
+    "capture": "node tools/capture.cjs",
+    "verify": "node tools/verify.cjs"
+  },
+  "devDependencies": {
+    "sharp": "0.34.5",
+    "playwright": "1.56.1"
+  }
+}

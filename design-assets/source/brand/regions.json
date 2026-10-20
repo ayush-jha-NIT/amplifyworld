@@ -1,0 +1,34 @@
+{
+  "source": "logo-wide-original.png",
+  "sourceSize": [
+    2069,
+    760
+  ],
+  "regions": {
+    "wide": [
+      130,
+      120,
+      1800,
+      445
+    ],
+    "compact": [
+      130,
+      120,
+      1800,
+      380
+    ],
+    "emblem": [
+      130,
+      120,
+      635,
+      385
+    ],
+    "arrow": [
+      555,
+      120,
+      210,
+      265
+    ]
+  },
+  "note": "Original RGB retained with alpha keyed only from near-black background. Neighbouring white wordmark excluded from emblem/arrow windows. Raster-backed SVGs are editable containers, not vector outlines."
+}

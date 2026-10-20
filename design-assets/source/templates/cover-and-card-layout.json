@@ -1,0 +1,29 @@
+{
+  "editorialCover": {
+    "canvas": [1200, 630],
+    "safeArea": {"x": 72, "y": 64, "width": 1056, "height": 502},
+    "articleTitle": "Render as live HTML adjacent to artwork, not baked into the illustration.",
+    "variants": ["editorial-search", "editorial-strategy", "editorial-ai", "editorial-social"],
+    "phoneCrop": "Preserve full illustration using 1.9:1; avoid clipping the focal symbol.",
+    "rights": "Original vector artwork. No external photographs or real people."
+  },
+  "projectCard": {
+    "canvas": [1200, 800],
+    "viewportSlot": {"x": 80, "y": 110, "width": 1040, "height": 590},
+    "label": "Concept / Placeholder",
+    "productionReplacement": "Use permission-cleared screenshots. Remove the concept label only after the project identity and claims are reviewed.",
+    "states": {
+      "active": {"translateXPercent": 0, "rotateY": 0, "scale": 1, "zIndex": 4},
+      "next": {"translateXPercent": 23, "rotateY": -24, "scale": 0.9, "zIndex": 3},
+      "third": {"translateXPercent": 39, "rotateY": -30, "scale": 0.8, "zIndex": 2},
+      "exiting": {"translateXPercent": -16, "rotateY": 18, "scale": 0.9, "opacity": 0.5}
+    },
+    "transitionSeconds": 0.62,
+    "perspectivePx": 1300
+  },
+  "contactEnvelope": {
+    "canvas": [800, 600],
+    "layers": ["envelope-body", "fold-lines", "direction-arrow", "ambient-node"],
+    "use": "Decorative artwork; never use an image as a form control."
+  }
+}

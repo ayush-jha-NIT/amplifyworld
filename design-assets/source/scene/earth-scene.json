@@ -1,0 +1,57 @@
+{
+  "radius": 1,
+  "segments": [
+    64,
+    32
+  ],
+  "camera": {
+    "fov": 35,
+    "position": [
+      0,
+      0.2,
+      5.8
+    ],
+    "near": 0.1,
+    "far": 20
+  },
+  "material": {
+    "roughness": 0.84,
+    "metalness": 0.08,
+    "emissiveIntensity": 0.6
+  },
+  "axialTiltDegrees": 23.4,
+  "rotationSeconds": 72,
+  "orbits": [
+    {
+      "radius": 1.38,
+      "period": 28,
+      "rotation": [
+        0.8,
+        0,
+        -0.45
+      ]
+    },
+    {
+      "radius": 1.56,
+      "period": 42,
+      "rotation": [
+        1.4,
+        0,
+        0.35
+      ]
+    }
+  ],
+  "atmosphere": {
+    "radius": 1.035,
+    "rimPower": 3.2,
+    "opacity": 0.85,
+    "color": "#ad64fa"
+  },
+  "particles": 96,
+  "mobileParticles": 24,
+  "dpr": {
+    "desktop": 1.5,
+    "mobile": 1.25
+  },
+  "fallback": "globe-fallback.svg"
+}
