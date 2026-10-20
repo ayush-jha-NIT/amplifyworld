@@ -9,7 +9,7 @@
     "start": "node dist/server.js",
     "typecheck": "pnpm db:generate && tsc -p tsconfig.check.json --noEmit",
     "lint": "eslint \"src/**/*.ts\" \"scripts/**/*.ts\" \"tests/**/*.ts\" prisma.config.ts --max-warnings=0",
-    "test": "pnpm db:generate && tsx --test src/*.test.ts src/db/*.test.ts src/notifications/*.test.ts",
+    "test": "pnpm db:generate && tsx --test src/*.test.ts src/db/*.test.ts src/notifications/*.test.ts src/admin/*.test.ts",
     "db:generate": "prisma generate",
     "db:validate": "prisma validate",
     "db:migrate:deploy": "tsx scripts/database.ts deploy",
@@ -17,7 +17,8 @@
     "db:migrate:dev": "tsx scripts/database.ts dev",
     "test:database": "tsx scripts/test-database.ts",
     "notifications:dispatch": "tsx scripts/dispatch-notifications.ts",
-    "retention:prune": "tsx scripts/prune-expired.ts"
+    "retention:prune": "tsx scripts/prune-expired.ts",
+    "admin:bootstrap": "tsx scripts/bootstrap-admin.ts"
   },
   "dependencies": {
     "@amplifyworld/shared": "workspace:*",

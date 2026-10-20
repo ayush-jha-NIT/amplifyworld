@@ -4,7 +4,7 @@
 
 AmplifyWorld helps businesses grow through strategic marketing, technology, branding, web development, SEO, GEO and AI automation. This repository is the planned production website for the agency.
 
-> **Development status:** **Modules 0–13 implemented and merged into `main`**: public experience, database, public APIs, secure inquiry receipts and the opt-in Resend notification/anti-abuse workflow. **Modules 14–18 remain.** No live Neon deployment, verified Resend sender or production message delivery is claimed.
+> **Development status:** **Modules 0–13 merged; Module 14 implemented on a feature branch and pending CI acceptance**: public experience, database, public APIs, secure inquiry receipts and the opt-in Resend notification/anti-abuse workflow. **Modules 15–18 remain after Module 14 acceptance.** No live Neon deployment, verified Resend sender or production message delivery is claimed.
 
 Modules 11–13 passed PostgreSQL integration, application checks and browser regressions. The [database guide](docs/DATABASE.md) covers the operator-controlled Neon bootstrap. **No Neon instance or production deployment has been provisioned in this work.**
 
@@ -65,6 +65,8 @@ The Contact form stays in **Check Inquiry** (local-only) mode by default. The Mo
 The independently reviewable design kit lives in [`design-assets/`](design-assets/README.md), with integrated developer instructions in [`docs/design/INTEGRATION_HANDOFF.md`](docs/design/INTEGRATION_HANDOFF.md). The large preview assets are not production page backgrounds.
 
 ## Project documents
+
+- [Module 14 secure admin CMS report](docs/MODULE_14_REPORT.md)
 
 - [Module 13 notification queue, Resend configuration and anti-abuse](docs/MODULE_13_REPORT.md)
 

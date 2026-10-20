@@ -39,7 +39,7 @@ amplifyworld/
 | GET | `/api/v1/posts` | Published blogs |
 | POST | `/api/v1/inquiries` | Validated business inquiry |
 
-Protected admin routes (implemented in M14) will have role-checked create, update, unpublish and deletion operations. Public content models should include slug, status, metadata, timestamps, and normalized taxonomy. Avoid storing social media credentials in this public website.
+Module 14 provides protected RS256 OIDC/JWKS content CRUD, draft editing, approvals, publishing, archiving and audit. Public content models should include slug, status, metadata, timestamps, and normalized taxonomy. Avoid storing social media credentials in this public website.
 
 ## Database concepts
 
@@ -80,6 +80,9 @@ INQUIRY_NOTIFY_EMAIL=
 INQUIRY_NOTIFICATION_BATCH_SIZE=5
 INQUIRY_ABUSE_HASH_SECRET=
 INQUIRY_RETENTION_CLEANUP_ENABLED=false
+ADMIN_OIDC_ISSUER=
+ADMIN_OIDC_AUDIENCE=
+ADMIN_OIDC_JWKS_URL=
 CLIENT_ORIGIN=
 PORT=
 
@@ -91,6 +94,9 @@ TRUST_PROXY_HOPS=0
 # Web - only non-secret values
 NEXT_PUBLIC_API_URL=
 NEXT_PUBLIC_INQUIRIES_ENABLED=false
+NEXT_PUBLIC_ADMIN_OIDC_CLIENT_ID=
+NEXT_PUBLIC_ADMIN_OIDC_AUTH_URL=
+NEXT_PUBLIC_ADMIN_OIDC_TOKEN_URL=
 NEXT_PUBLIC_WHATSAPP_NUMBER=
 ```
 

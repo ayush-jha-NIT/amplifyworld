@@ -3,6 +3,7 @@ import express from "express";
 import type { ErrorRequestHandler } from "express";
 import type { HealthResponse } from "@amplifyworld/shared";
 import { createPublicRouter } from "./routes/public.js";
+import { createAdminRouter } from "./admin/router.js";
 
 export function createApp(options: Parameters<typeof createPublicRouter>[0] = {}) {
   const app = express();
@@ -22,6 +23,7 @@ export function createApp(options: Parameters<typeof createPublicRouter>[0] = {}
     response.status(200).json(payload);
   });
   app.use("/api/v1", createPublicRouter(options));
+  app.use("/api/v1/admin", createAdminRouter());
 
   const handleError: ErrorRequestHandler = (err: unknown, _request, response, _next) => {
     void _next;

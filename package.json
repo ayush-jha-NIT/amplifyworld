@@ -20,6 +20,7 @@
     "db:migrate:dev": "pnpm --filter @amplifyworld/api db:migrate:dev",
     "test:database": "pnpm --filter @amplifyworld/api test:database",
     "notifications:dispatch": "pnpm --filter @amplifyworld/api notifications:dispatch",
-    "retention:prune": "pnpm --filter @amplifyworld/api retention:prune"
+    "retention:prune": "pnpm --filter @amplifyworld/api retention:prune",
+    "admin:bootstrap": "pnpm --filter @amplifyworld/api admin:bootstrap"
   }
 }
