@@ -2,14 +2,14 @@
 
 **Status: DEPLOYMENT BLOCKED PENDING OPERATOR RESOURCES.** This is a tested deployment plan, not evidence that any production service has been provisioned. The repository deployment configuration is safe by default.
 
-## Provider inventory checked 20 October 2026
+## Provider inventory checked 20–21 October 2026
 
 | Provider | Observed | Required action |
 | --- | --- | --- |
 | GitHub | Verified source ayush-jha-NIT/amplifyworld | CI on main before deployment |
-| Vercel | Only digimarket-software found | Establish a separate AmplifyWorld Vercel project, do not modify Digimarket |
-| Neon | Only Digimarket-software found | Provision a dedicated AmplifyWorld Neon project, do not reuse another agency database |
-| Render | Workspace named amplify's workspace discovered | Obtain explicit confirmation of workspace ID/owner before accessing or changing services |
+| Vercel | Desired team `ayush-jha-nits-projects` returns **403** from both linked accounts | Grant the integration explicit team permission; do not create in an unrelated team |
+| Neon | Dedicated **AmplifyWorld** PostgreSQL 17 free project `lingering-pond-17105101`, branch main, database `amplifyworld`; **no application tables** yet (read-only inspection) | Apply reviewed Prisma migrations using the schema-owner credentials and configure restricted runtime role only after hosting confirmed |
+| Render | Discovered workspace `amplify's workspace` **rejected by owner** | **Do not access it.** User must connect and authorize correct workspace or explicitly approve a different free backend |
 | Resend | No sender/recipient identity or approved mail configuration provided | Do not enable notifications until sender is verified and mail destination is approved |
 
 ## 1. Operator confirmation and environment prerequisites
@@ -54,7 +54,7 @@ Changes to NEXT_PUBLIC variables require rebuilding the frontend.
 
 ## 4. Neon separate database and controlled migrations
 
-Provision a dedicated Neon project only after authorization. Follow DATABASE.md for restricted runtime role, direct schema-owner identity, permissions, migration history and TLS requirements.
+The dedicated AmplifyWorld Neon project already exists: `lingering-pond-17105101`. It has no application tables (read-only inspection on 21 October 2026). Do NOT create a duplicate project. Follow DATABASE.md for restricted runtime role, direct schema-owner identity, permissions, migration history and TLS requirements.
 
 - DATABASE_URL: secret pooled PostgreSQL URL for a restricted runtime role, using verified TLS.
 - DIRECT_URL: use only within a controlled migration environment; never persist in the API web service.

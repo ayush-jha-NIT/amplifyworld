@@ -4,7 +4,7 @@
 
 AmplifyWorld helps businesses grow through strategic marketing, technology, branding, web development, SEO, GEO and AI automation. This repository is the planned production website for the agency.
 
-> **Development status:** **Modules 0–16 merged and CI-verified**: public experience, database, public APIs, secure inquiry receipts and the opt-in Resend notification/anti-abuse workflow. **Module 17 deployment code has been merged and CI-verified; live deployment is pending operator setup and verification. Module 18 remains.** No live Neon deployment, verified Resend sender or production message delivery is claimed.
+> **Development status:** **Modules 0–16 merged and CI-verified**: public experience, database, public APIs, secure inquiry receipts and the opt-in Resend notification/anti-abuse workflow. **Modules 0–16 and Module 17 deployment-readiness code are CI-verified. Module 18 handover tooling is implemented in a PR under verification. Actual production launch is blocked on hosting authorization, migrations and service approvals.** No live Neon deployment, verified Resend sender or production message delivery is claimed.
 
 Modules 11–13 passed PostgreSQL integration, application checks and browser regressions. The [database guide](docs/DATABASE.md) covers the operator-controlled Neon bootstrap. **No Neon instance or production deployment has been provisioned in this work.**
 
@@ -65,6 +65,10 @@ The Contact form stays in **Check Inquiry** (local-only) mode by default. The Mo
 The independently reviewable design kit lives in [`design-assets/`](design-assets/README.md), with integrated developer instructions in [`docs/design/INTEGRATION_HANDOFF.md`](docs/design/INTEGRATION_HANDOFF.md). The large preview assets are not production page backgrounds.
 
 ## Project documents
+
+- [Module 18: release audit and handover](docs/MODULE_18_REPORT.md)
+- [Operator manual and incident response](docs/OPERATIONS_MANUAL.md)
+- [Current release decision](docs/RELEASE_DECISION.md)
 
 - [Module 17 deployment preparation and operator release gates](docs/MODULE_17_REPORT.md)
 - [Deployment runbook for Render, Vercel, Neon and Resend](docs/DEPLOYMENT_RUNBOOK.md)

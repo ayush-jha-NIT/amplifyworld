@@ -17,7 +17,7 @@
 
 ## Resource audit
 
-Connected Vercel and Neon inventories contain only the unrelated Digimarket projects, not a dedicated AmplifyWorld project. The Render connector discovered one workspace named amplify's workspace, but requires explicit operator confirmation before selecting it. Do not reuse resources or infer production ownership. A verified Resend sender, recipient, privacy approval and real deployment URLs are not yet provided.
+**Updated 21 October 2026:** A dedicated AmplifyWorld Neon PostgreSQL 17 project now exists, ID `lingering-pond-17105101` in free organization `org-morning-sun-25779618`, branch `main`, database `amplifyworld`. Read-only `information_schema.tables` inspection showed **no public application tables**, so production Prisma migrations have NOT been applied. Both connected Vercel accounts still receive **403 Forbidden** for requested team `ayush-jha-nits-projects`; no Vercel deployment is established. The user explicitly rejected the Render workspace named `amplify's workspace`, so it must not be selected or modified. No approved alternative backend workspace has been provided. Do not reuse any Digimarket infrastructure. A verified Resend sender, recipient, privacy approval and real deployment URLs are not yet provided.
 
 ## Release acceptance status
 

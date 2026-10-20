@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "",
+  "gates": {
+    "githubCiGreen,[object Object]": [
+      "frontendDeployed",
+      {
+        "status": "blocked",
+        "evidenceUrl": ""
+      }
+    ]
+  }
+}
