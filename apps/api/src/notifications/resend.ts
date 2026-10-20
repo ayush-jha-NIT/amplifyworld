@@ -9,7 +9,7 @@ export type EmailSender = (job: NotificationJob) => Promise<EmailResult>;
 export type ResendSettings = { apiKey: string; from: string; to: string };
 
 const EMAIL = /^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/;
-const CONTROLS = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g;
+
 
 /** Always fail closed if any verified sender/recipient or server secret is missing. */
 export function resendSettings(env: NodeJS.ProcessEnv): ResendSettings {
@@ -24,7 +24,9 @@ export function resendSettings(env: NodeJS.ProcessEnv): ResendSettings {
 }
 
 export function emailPayload(job: NotificationJob, settings: ResendSettings) {
-  const clean = (value: string | null) => (value ?? "Not provided").replace(CONTROLS, "").slice(0, 5000);
+  const clean = (value: string | null) => [...(value ?? "Not provided")]
+    .filter(char => { const n = char.charCodeAt(0); return n === 9 || n === 10 || (n >= 32 && n !== 127); })
+    .join("").slice(0, 5000);
   const service = SERVICES.find(item => item.id === job.serviceId)?.title ?? "Not sure yet";
   return {
     from: settings.from,
