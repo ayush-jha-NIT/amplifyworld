@@ -38,7 +38,7 @@ before(async () => {
       body: "Approved text", status: "PUBLISHED", publishedAt: new Date(), claimsReviewedAt: new Date() }
   });
   await db.project.create({ data: { slug: slug + "-draft", name: "Private project" } });
-  server = createApp({ collectionEnabled: true, privacyApproved: true, retentionDays: 30 }).listen(0);
+  server = createApp({ collectionEnabled: true, privacyApproved: true, retentionDays: 30, abuseSecret: "test-only-opaque-64-character-rate-secret-very-private" }).listen(0);
   await once(server, "listening");
   base = "http://127.0.0.1:" + (server.address() as AddressInfo).port;
 });
