@@ -246,7 +246,6 @@ export function HeroScene() {
           <path d={ROAD_PATH} fill="none" stroke="#8923e2" strokeWidth="14" strokeLinecap="round" opacity=".8" filter="url(#hero-road-glow)" />
           <path data-road-progress d={ROAD_PATH} fill="none" stroke="url(#hero-road-gradient)" strokeWidth="5" strokeLinecap="round" />
           <circle data-travel-light r="9" cx="60" cy="710" fill="#f4c8ff" filter="url(#hero-road-glow)" />
-          <circle data-travel-light r="4" cx="60" cy="710" fill="#fff" />
         </svg>
         <div className="hero-scene-mark" data-scene-mark>
           <Image src="/design/brand/logo-emblem.webp" alt="" fill sizes="(max-width: 640px) 150px, 240px" style={{ objectFit: "contain" }} />
