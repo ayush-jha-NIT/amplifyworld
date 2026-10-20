@@ -8,11 +8,11 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="content-shell">
         <section className="footer-invitation" aria-labelledby="footer-invitation-title">
-          <p className="eyebrow">Ready for what's next?</p>
+          <p className="eyebrow">Ready for what&apos;s next?</p>
           <h2 id="footer-invitation-title">
             Build What&apos;s Next. <span className="gradient-text">Amplify What Matters.</span>
           </h2>
-          <p>Let's connect strategy, creativity and technology to your business goals.</p>
+          <p>Let&apos;s connect strategy, creativity and technology to your business goals.</p>
           <WhatsAppCta label="Talk to Amplify World" />
           {!process.env.NEXT_PUBLIC_WHATSAPP_NUMBER && (
             <p className="footer-configuration">WhatsApp contact will be enabled once our verified number is configured.</p>
