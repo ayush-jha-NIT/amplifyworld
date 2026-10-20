@@ -2,7 +2,7 @@
  * Search indexing is opt-in after the operator has verified the production domain.
  * Preview, staging and unknown deployments intentionally do not expose canonical URLs.
  */
-export function siteOrigin(env: NodeJS.ProcessEnv = process.env): URL | null {
+export function siteOrigin(env: Partial<NodeJS.ProcessEnv> = process.env): URL | null {
   if (env.SITE_INDEXING_ENABLED !== "true" || env.VERCEL_ENV === "preview" ||
       env.VERCEL_ENV === "development") return null;
   const raw = env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -17,7 +17,7 @@ export function siteOrigin(env: NodeJS.ProcessEnv = process.env): URL | null {
     return null;
   }
 }
-export function absolutePublicUrl(path = "/", env: NodeJS.ProcessEnv = process.env): string | null {
+export function absolutePublicUrl(path = "/", env: Partial<NodeJS.ProcessEnv> = process.env): string | null {
   const origin = siteOrigin(env);
   if (!origin || !path.startsWith("/") || path.startsWith("//") || path.includes("?") || path.includes("#")) return null;
   return new URL(path, origin).href;
