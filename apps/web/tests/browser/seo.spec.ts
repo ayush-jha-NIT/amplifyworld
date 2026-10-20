@@ -38,5 +38,5 @@ test("unknown page has meaningful 404 and noindex",async({page})=>{
   const response=await page.goto("/no-such-page-15");
   expect(response?.status()).toBe(404);
   await expect(page.getByRole("heading",{name:"This page is not available."})).toBeVisible();
-  await expect(page.locator("meta[name='robots']")).toHaveAttribute("content",/noindex/);
+  await expect(page.locator("meta[name='robots']").first()).toHaveAttribute("content",/noindex/);
 });
