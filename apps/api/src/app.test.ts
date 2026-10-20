@@ -67,7 +67,7 @@ test("cross-origin administrator PATCH preflight allows configured browser origi
     }});
     assert.ok([200,204].includes(ok.status));
     assert.equal(ok.headers.get("access-control-allow-origin"),"http://localhost:3000");
-    assert.match(ok.headers.get("access-control-allow-methods")??"","PATCH");
+    assert.match(ok.headers.get("access-control-allow-methods")??"",/PATCH/);
     const denied = await fetch(url,{method:"OPTIONS",headers:{
       Origin:"https://untrusted.example","Access-Control-Request-Method":"PATCH"
     }});
