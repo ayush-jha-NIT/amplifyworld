@@ -23,6 +23,22 @@ export interface NotificationQueue {
 export const prismaNotificationQueue: NotificationQueue = {
   async claim(limit) {
     if (!Number.isInteger(limit) || limit < 1 || limit > 10) throw new Error("Invalid notification batch size");
+    // If the process died on its final attempt, do not strand the record
+    // permanently in PROCESSING after its lease expires. It needs manual review:
+    // an external provider may already have accepted the ambiguous send.
+    await getDatabase().inquiry.updateMany({
+      where: {
+        notificationStatus: "PROCESSING",
+        notificationAttempts: { gte: 4 },
+        notificationLeaseUntil: { lte: new Date() }
+      },
+      data: {
+        notificationStatus: "SKIPPED",
+        notificationClaimToken: null,
+        notificationLeaseUntil: null,
+        nextNotificationAt: null
+      }
+    });
     const token = randomUUID();
     // SQL is a fixed string; only validated numeric limit and UUID token are bound.
     // SKIP LOCKED safely coordinates independent workers, without external I/O inside the claim.
