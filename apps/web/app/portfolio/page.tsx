@@ -7,7 +7,8 @@ import { SectionReveal } from "@/components/home/section-reveal";
 
 export const metadata: Metadata = {
   title: "Our Portfolio",
-  description: "Explore illustrative growth website, performance marketing and local discovery concepts from AmplifyWorld. These are design studies, not verified client engagements."
+  description: "Explore illustrative growth website, performance marketing and local discovery concepts from AmplifyWorld. These are design studies, not verified client engagements.",
+  robots: { index: false, follow: true }
 };
 
 const process = [
