@@ -38,7 +38,7 @@ test("shared layout respects tokens, reduced motion and real logo sources", () =
 });
 
 test("process and service section anchors are real", () => {
-  const home = text("app/page.tsx");
+  const home = text("components/home/home-sections.tsx");
   assert.ok(home.includes('id="services"'));
   assert.ok(home.includes('id="process"'));
 });

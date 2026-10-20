@@ -7,8 +7,8 @@ const read = (file) => readFileSync(new URL("../" + file, import.meta.url), "utf
 test("home renders the production cinematic hero without removing other sections", () => {
   const page = read("app/page.tsx");
   assert.match(page, /<HomeHero\s*\/>/);
-  assert.match(page, /id="services"/);
-  assert.match(page, /id="process"/);
+  assert.match(read("components/home/home-sections.tsx"), /id="services"/);
+  assert.match(read("components/home/home-sections.tsx"), /id="process"/);
   const hero = read("components/home/home-hero.tsx");
   assert.match(hero, /We Amplify/);
   assert.match(hero, /Your Business Growth/);
