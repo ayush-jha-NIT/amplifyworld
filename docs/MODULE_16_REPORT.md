@@ -20,7 +20,7 @@ This module extends the **production Next.js web app** Playwright suite beyond t
 - Inline Blog query navigation, deep link, reading region, article TOC, browser Back/Forward, unavailable article, search and clear.
 - Skip link and reduced-motion Home: confirm still fallback, no WebGL canvas when motion is reduced, no spinning controls.
 - Contact form validation, conservative no-delivery message without configured API, input preservation and no network POST.
-- Contact at simulated 200% Chromium CSS zoom; **not equivalent to physical OS-level zoom, screen-reader testing, or browser-engine coverage**.
+- Contact reflow at CSS viewport widths **320 and 720 px**, equivalent to 200% browser zoom from 640 and 1440 physical CSS pixels. Chromium headless does not provide a reliable native zoom API; this is a layout reflow approximation, **not equivalent to real OS/browser zoom, screen-reader testing, or cross-engine coverage**.
 - Existing browser suite also covers Contact at six widths, admin noindex, preview SEO, 404, no-JavaScript form safety and browser keyboard requirements.
 
 ### Capture and review workflow
