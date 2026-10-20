@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { useEffect, useMemo, useRef } from "react";
+import { Suspense, useEffect, useMemo, useRef } from "react";
 import {
   AdditiveBlending,
   BufferGeometry,
@@ -70,10 +70,12 @@ function Planet({ running, mobile, onReady }: { running: boolean; mobile: boolea
   const ringOne = useRef<Group>(null);
   const ringTwo = useRef<Group>(null);
   const texturePath = mobile ? "/design/scene/earth-surface-1024.webp" : "/design/scene/earth-surface-2048.webp";
-  const [surface, emission] = useLoader(TextureLoader, [
+  const textures = useLoader(TextureLoader, [
     texturePath,
     "/design/scene/earth-emissive-2048.webp"
   ]);
+  const surface = textures[0]!;
+  const emission = textures[1]!;
 
   useEffect(() => {
     surface.colorSpace = SRGBColorSpace;
@@ -167,7 +169,9 @@ export function HeroEarth({ running, onReady, onUnavailable }: Props) {
         <ambientLight color="#8070ae" intensity={1.4} />
         <directionalLight position={[-3, 3, 4]} color="#d3b8ff" intensity={3.2} />
         <directionalLight position={[3, -1, -2]} color="#a62bff" intensity={3} />
-        <Planet running={running} mobile={mobile} onReady={() => readyRef.current()} />
+        <Suspense fallback={null}>
+          <Planet running={running} mobile={mobile} onReady={() => readyRef.current()} />
+        </Suspense>
       </Canvas>
     </div>
   );
