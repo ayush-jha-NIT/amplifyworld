@@ -136,7 +136,7 @@ export function HeroScene() {
           }, 0.5);
 
         MILESTONES.forEach(({ start }, index) => {
-          currentTimeline?.fromTo(signs[index],
+          currentTimeline?.fromTo(signs[index]!,
             { autoAlpha: 0, y: 8 },
             { autoAlpha: 1, y: 0, duration: 0.45, ease: "power3.out" }, start);
         });
