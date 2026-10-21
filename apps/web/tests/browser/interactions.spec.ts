@@ -13,7 +13,9 @@ test.describe("Module 16 keyboard, motion and functional regressions", () => {
     await expect(page.getByRole("button", { name: "Open navigation" })).toBeFocused();
     await expect(page.getByRole("button", { name: "Open navigation" })).toHaveAttribute("aria-expanded", "false");
     await page.getByRole("button", { name: "Open navigation" }).click();
-    await page.getByRole("navigation", { name: "Primary navigation" }).getByRole("link", { name: "Work" }).click();
+    const primaryNavigation = page.getByRole("navigation", { name: "Primary navigation" });
+    await expect(primaryNavigation.getByRole("link", { name: "Process" })).toHaveCount(0);
+    await primaryNavigation.getByRole("link", { name: "Portfolio" }).click();
     await expect(page).toHaveURL(/\/portfolio$/);
     await expect(page.getByRole("button", { name: "Open navigation" })).toHaveAttribute("aria-expanded", "false");
   });
