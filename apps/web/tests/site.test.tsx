@@ -19,8 +19,9 @@ test("SEO indexing fails closed in previews and without verified explicit activa
 });
 
 test("canonical URL helper includes only approved, query-free local routes", () => {
-  assert.deepEqual(marketingRoutes, ["/", "/about", "/contact"]);
+  assert.deepEqual(marketingRoutes, ["/", "/about", "/services", "/contact"]);
   assert.equal(absolutePublicUrl("/about", configured), "https://amplify.example/about");
+  assert.equal(absolutePublicUrl("/services", configured), "https://amplify.example/services");
   assert.equal(absolutePublicUrl("/contact", configured), "https://amplify.example/contact");
   assert.equal(absolutePublicUrl("/", configured), "https://amplify.example/");
   assert.equal(absolutePublicUrl("//untrusted.test", configured), null);
