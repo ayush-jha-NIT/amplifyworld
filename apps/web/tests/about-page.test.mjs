@@ -35,7 +35,7 @@ test("About art is a single owned decorative illustration, not a separate WebGL 
 
 test("About page keeps useful CTA navigation when WhatsApp is unconfigured", () => {
   const page = read("app/about/page.tsx");
-  assert.match(page, /href="\/#services"/);
+  assert.match(page, /href="\/services"/);
   assert.match(page, /href="\/contact"/);
   assert.match(page, /href="\/portfolio"/);
   assert.match(page, /WhatsAppCta label="Talk to Amplify World"/);

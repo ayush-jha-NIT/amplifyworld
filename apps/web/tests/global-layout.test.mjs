@@ -4,9 +4,9 @@ import test from "node:test";
 
 const text = (path) => readFileSync(new URL(`../${path}`, import.meta.url), "utf8");
 
-test("shared header contains all five routes, active state and mobile disclosure semantics", () => {
+test("shared header contains all six current routes, active state and mobile disclosure semantics", () => {
   const header = text("components/site-header.tsx");
-  for (const path of ["/", "/about", "/portfolio", "/blog", "/contact", "/#services", "/#process"]) {
+  for (const path of ["/", "/about", "/services", "/portfolio", "/blog", "/contact"]) {
     assert.ok(header.includes(`href: "${path}"`));
   }
   for (const label of ["aria-expanded", "aria-controls", 'event.key === "Escape"', "aria-current"]) {
