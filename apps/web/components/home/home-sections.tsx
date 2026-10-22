@@ -35,8 +35,8 @@ export function HomeSections() {
                     <p>{detail.description}</p>
                     <Link
                       className="home-card-arrow"
-                      href="/contact"
-                      aria-label={`Discuss ${service.title} with AmplifyWorld`}
+                      href={`/services#${service.id}`}
+                      aria-label={`Explore ${service.title} details`}
                     >
                       <span aria-hidden="true">↗</span>
                     </Link>

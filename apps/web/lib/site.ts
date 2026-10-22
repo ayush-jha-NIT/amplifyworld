@@ -22,7 +22,7 @@ export function absolutePublicUrl(path = "/", env: Partial<NodeJS.ProcessEnv> = 
   if (!origin || !path.startsWith("/") || path.startsWith("//") || path.includes("?") || path.includes("#")) return null;
   return new URL(path, origin).href;
 }
-export const marketingRoutes = ["/", "/about", "/contact"] as const;
+export const marketingRoutes = ["/", "/about", "/services", "/contact"] as const;
 
 export function structuredEntity(json: Record<string, unknown>) {
   // JSON-LD is first-party server-owned data; escape HTML-sensitive characters.

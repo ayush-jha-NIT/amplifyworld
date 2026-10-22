@@ -3,7 +3,7 @@ import test from "node:test";
 import { readFileSync } from "node:fs";
 const read=path=>readFileSync(new URL("../"+path,import.meta.url),"utf8");
 test("Marketing routes have truthful canonical and structured metadata",()=>{
- for(const p of ["app/page.tsx","app/about/page.tsx","app/contact/page.tsx"]){
+ for(const p of ["app/page.tsx","app/about/page.tsx","app/services/page.tsx","app/contact/page.tsx"]){
   const content=read(p);
   assert.match(content,/alternates: \{ canonical/);
   assert.match(content,/openGraph:/);

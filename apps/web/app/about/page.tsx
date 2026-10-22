@@ -95,7 +95,7 @@ export default function AboutPage() {
             </p>
             <div className="about-hero-actions">
               <WhatsAppCta label="Talk to Amplify World" />
-              <Link href="/#services" className="about-secondary-action">
+              <Link href="/services" className="about-secondary-action">
                 See Our Services <span aria-hidden="true">↗</span>
               </Link>
             </div>
@@ -218,7 +218,7 @@ export default function AboutPage() {
             </div>
             <div className="about-expertise-grid">
               {SERVICES.map((service) => (
-                <Link href="/#services" key={service.id} data-reveal className="about-expertise-item">
+                <Link href={`/services#${service.id}`} key={service.id} data-reveal className="about-expertise-item">
                   <AboutIcon name={serviceDetails[service.id].icon} />
                   <span>{service.title}</span>
                   <span aria-hidden="true" className="about-expertise-arrow">↗</span>

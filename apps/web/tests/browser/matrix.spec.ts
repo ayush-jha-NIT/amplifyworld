@@ -6,6 +6,7 @@ const viewports = [320, 375, 390, 768, 1024, 1440] as const;
 const routes = [
   { slug: "home", url: "/", heading: "We Amplify" },
   { slug: "about", url: "/about", heading: "Growth Partner" },
+  { slug: "services", url: "/services", heading: "Our Services" },
   { slug: "portfolio", url: "/portfolio", heading: "Our Portfolio" },
   { slug: "blog", url: "/blog", heading: "Insights That" },
   { slug: "article", url: "/blog?article=search", heading: "Insights That" },
